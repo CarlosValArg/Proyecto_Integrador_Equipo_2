@@ -1,0 +1,36 @@
+body{
+    background-image: url(./assets/ghatgpt.png);
+}
+#lorem-two{
+    font-size: 40px;
+}
+h2{
+    background-color: blueviolet;
+}
+
+#propiedad-color{
+    color: red;
+    font-size: 20px;
+}
+
+h4{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,121,9,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+img{
+
+    width: 275px;
+    height: 100px;
+}
+
+h4{
+    font-family: "Bungee Tint", sans-serif;
+    font-size: 100px;
+}
+
+p{
+    font-size: 30px;
+    font-style: italic;
+}
+
