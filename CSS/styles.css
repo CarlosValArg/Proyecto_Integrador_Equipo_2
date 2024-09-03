@@ -1,0 +1,20 @@
+    .carousel-inner .card {
+      max-width: 18rem;
+      margin: 0 auto; /* Centrar las tarjetas */
+}
+    .carousel-item {
+      text-align: center; /* Alinear el contenido de cada slide al centro */
+}
+
+    .card-title {
+    font-size: 20px; /* Tamaño de letra para el nombre */
+}
+    .card-subtitle {
+    font-size: 18px; /* Tamaño de letra para el título profesional */
+}
+
+    .icon {
+    width: 24px;  /* Ajusta el ancho */
+    height: 24px; /* Ajusta la altura */
+    vertical-align: middle; /* Alinea el ícono con el texto */
+}
