@@ -1,10 +1,55 @@
-body{
-    background-image: url(./assets/ghatgpt.png);
+#nosotros:hover {
+    
+    transform: scale(1.1);
+    transition: 10s;
 }
-#lorem-two{
-    font-size: 40px;
+h1{
+    color: #A5D7E8;
+    font-family: roboto;
+    /* font-size: 24px; */
 }
 h2{
+    font-family: roboto;
+    /* font-size: 24px; */
+}
+p{
+    
+    font-family: roboto;
+    /* font-size: 18px; */
+}
+
+.col-sm{
+    margin: 0px 20px 0px 20px;
+    padding: 20 px 0px 20px 0px;
+}
+
+
+@media(max-width:576px){
+    .container{
+        text-align: center;
+    }
+}
+.container{margin: 20px 0px 20px 0px;}
+
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+   background-color: aqua;
+}
+@media(max-width:991px){
+    body{
+        padding: 30px;
+
+    }
+    form{
+        width: 340px;
+    }
+} */
+/* h2{
     background-color: blueviolet;
 }
 
@@ -32,5 +77,5 @@ h4{
 p{
     font-size: 30px;
     font-style: italic;
-}
+} */
 
