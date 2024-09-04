@@ -1,21 +1,21 @@
 #nosotros:hover {
     
     transform: scale(1.1);
-    transition: 10s;
+    transition: 3s;
 }
 h1{
     color: #A5D7E8;
     font-family: roboto;
-    /* font-size: 24px; */
+     font-size: 24px; 
 }
 h2{
     font-family: roboto;
-    /* font-size: 24px; */
+     font-size: 24px; 
 }
 p{
     
     font-family: roboto;
-    /* font-size: 18px; */
+     font-size: 18px; 
 }
 
 .col-sm{
@@ -32,50 +32,4 @@ p{
 .container{margin: 20px 0px 20px 0px;}
 
 
-/* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-h1{
-   background-color: aqua;
-}
-@media(max-width:991px){
-    body{
-        padding: 30px;
-
-    }
-    form{
-        width: 340px;
-    }
-} */
-/* h2{
-    background-color: blueviolet;
-}
-
-#propiedad-color{
-    color: red;
-    font-size: 20px;
-}
-
-h4{
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,121,9,1) 35%, rgba(0,212,255,1) 100%);
-}
-
-img{
-
-    width: 275px;
-    height: 100px;
-}
-
-h4{
-    font-family: "Bungee Tint", sans-serif;
-    font-size: 100px;
-}
-
-p{
-    font-size: 30px;
-    font-style: italic;
-} */
 
