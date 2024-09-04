@@ -1,0 +1,74 @@
+.card-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-container {
+    display: flex;
+    transition: transform 0.5s ease;
+
+
+}
+
+
+.card {
+    margin: 0 5px; /* Espacio entre tarjetas */
+}
+
+/* Estilo para el fondo degradado de cada tarjeta */
+.card {
+    background: linear-gradient(to bottom right, #5AE0E4, #245065);
+    border-radius: 30px;
+}
+
+.card .icon {
+    width: 24px;  /* Ajusta el ancho */
+    height: 24px; /* Ajusta la altura */
+    vertical-align:middle; /* Alinea el ícono con el texto */
+    
+}
+
+/* Efecto al pasar el mouse */
+.card .icon:hover {
+    transform: scale(1.5); /* Aumenta el tamaño a 120% */
+    filter: brightness(1.5); /* Aumenta el brillo del ícono */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #576CBC;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-inner .card {
+    max-width: 18rem;
+    margin: 0 auto; /* Centrar las tarjetas */
+}
+
+.carousel-item {
+    text-align: center; /* Alinear el contenido de cada slide al centro */
+}
