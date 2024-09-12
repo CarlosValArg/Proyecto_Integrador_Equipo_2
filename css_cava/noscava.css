@@ -1,0 +1,32 @@
+#nosotros:hover {
+
+    transform: scale(1.1);
+    transition: 3s;
+}
+h1{
+    color: #A5D7E8;
+    font-family: roboto;
+     font-size: 32px; 
+}
+h2{
+    font-family: roboto;
+     font-size: 32px; 
+}
+p{
+
+    font-family: roboto;
+     font-size: 24px; 
+}
+
+.col-sm{
+    margin: 0px 20px 0px 20px;
+    padding: 20 px 0px 20px 0px;
+}
+
+
+@media(max-width:576px){
+    .container{
+        text-align: center;
+    }
+}
+.container{margin: 20px 10px 20px 10px;}
