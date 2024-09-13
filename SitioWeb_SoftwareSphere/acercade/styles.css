@@ -48,9 +48,14 @@
        background-color: #576CBC;
    }
 
+#contacto{
+    margin-right: 80px;
+}
 
 /* Acerca de nosotros*/
-
+#nosotros{
+    position: relative;
+}
 #nosotros:hover {
     
     transform: scale(1.1);
