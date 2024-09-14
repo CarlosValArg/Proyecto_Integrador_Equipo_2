@@ -41,3 +41,9 @@ addItem({
     'price': '$500 .00 MXN'
 });
 
+addItem({
+    'name': 'Apps para carros',
+    'img': 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnet.com%2Froadshow%2Fnews%2Fbest-android-auto-head-unit%2F&psig=AOvVaw2MW5jb2O2HIUXpGmMg21mv&ust=1726434869368000&source=images&opi=89978449',
+    'description': 'Creamos aplicaciones para panel de tu carro, con SOFTWARE SPHERE y lleva tu conocimiento de enseñanza acabo con ayuda de medios digitales y tecnologías de la información comunicación.',
+    'price': '$500 .00 MXN'
+});
