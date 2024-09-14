@@ -47,3 +47,10 @@ addItem({
     'description': 'Creamos aplicaciones para panel de tu carro, con SOFTWARE SPHERE y lleva tu conocimiento de enseñanza acabo con ayuda de medios digitales y tecnologías de la información comunicación.',
     'price': '$500 .00 MXN'
 });
+
+addItem({
+    'name': 'Apps Android',
+    'img': 'https://www.brandemia.org/wp-content/uploads/2012/10/logo_principal.jpg',
+    'description': 'Ofrecemos soluciones para teléfonos Android, dispositivos portátiles y otros aparatos del ecosistema Android.',
+    'price': 'Suscripción $25.00 MXN'
+});
