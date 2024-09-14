@@ -15,9 +15,9 @@ function addItem(item) {
 
 
 addItem({
-    'name': 'SportWatch',
-    'img': 'https://static.vecteezy.com/system/resources/previews/017/494/093/non_2x/letter-s-fitness-gym-logo-design-fitness-club-exercising-logo-free-vector.jpg',
-    'description': 'Registra datos relevantes para su condición física, como pasos dados, horas de sueño, frecuencia cardíaca y calorías quemadas, también le brinda interpretaciones profesionales.',
+    'name': 'Apps Smart Watch',
+    'img': 'https://m.media-amazon.com/images/I/61gpLj2KvTL._AC_SL1500_.jpg',
+    'description': 'Ofrecemos aplicaciones de smartwatch que combinan funcionalidad avanzada con una experiencia de usuario intuitiva.',
     'price': 'Suscripción $20.00 MXN'
 });
 
@@ -28,9 +28,9 @@ addItem({
     'price': 'Suscripción $20.00 MXN'
 });
 addItem({
-    'name': 'ReciclApp',
-    'img': 'https://www.raeeandalucia.es/sites/default/files/images/signo-reciclaje-fondo-mundo.jpg',
-    'description': 'Aplicación disponible para sistema iOs, que te permite poner a la venta tu material reciclable al por mayor o por menor...! La idea es cuidar al planeta y a la vez recibir un pago por esto...!',
+    'name': 'Apps iOS',
+    'img': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA5r0_FrSjm2OgttQLwh_CnVCnzbJ7dLv6oA&s',
+    'description': 'Software Sphere es un experto en desarrollar aplicaciones para iPhones y iPads, ofreciendo soluciones móviles personalizadas.',
     'price': 'Suscripción $20.00 MXN'
 });
 
@@ -42,9 +42,9 @@ addItem({
 });
 
 addItem({
-    'name': 'Apps para carros',
-    'img': 'https://www.cnet.com/a/img/resize/310cb798998d83f1b5e75fee3c08c3f45a5149cb/hub/2020/07/13/365cbe12-abfe-406c-9172-6531fefc38fe/kenwood-excelon-dnx997xr-ogi.jpg?auto=webp&fit=crop&height=1200&width=1200',
-    'description': 'Creamos aplicaciones para panel de tu carro, con SOFTWARE SPHERE y lleva tu conocimiento de enseñanza acabo con ayuda de medios digitales y tecnologías de la información comunicación.',
+    'name': 'Automóvil',
+    'img': 'https://www.shutterstock.com/image-vector/using-smart-lock-application-icon-260nw-2493334223.jpg',
+    'description': 'Desarrollamos aplicaciones innovadoras para automóviles que mejoran la conectividad y la experiencia de conducción.',
     'price': '$500 .00 MXN'
 });
 
