@@ -43,7 +43,7 @@ addItem({
 
 addItem({
     'name': 'Apps para carros',
-    'img': 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnet.com%2Froadshow%2Fnews%2Fbest-android-auto-head-unit%2F&psig=AOvVaw2MW5jb2O2HIUXpGmMg21mv&ust=1726434869368000&source=images&opi=89978449',
+    'img': 'https://www.cnet.com/a/img/resize/310cb798998d83f1b5e75fee3c08c3f45a5149cb/hub/2020/07/13/365cbe12-abfe-406c-9172-6531fefc38fe/kenwood-excelon-dnx997xr-ogi.jpg?auto=webp&fit=crop&height=1200&width=1200',
     'description': 'Creamos aplicaciones para panel de tu carro, con SOFTWARE SPHERE y lleva tu conocimiento de enseñanza acabo con ayuda de medios digitales y tecnologías de la información comunicación.',
     'price': '$500 .00 MXN'
 });
