@@ -27,7 +27,17 @@ addItem({
     'description': 'Contenido premium que sea informativo . Esto puede ser en forma de artículos, seminarios web, podcasts o recursos descargables a cambio de una tarifa de suscripción.',
     'price': 'Suscripción $20.00 MXN'
 });
-addItem({'name':'ReciclApp',
-    'img':'https://www.raeeandalucia.es/sites/default/files/images/signo-reciclaje-fondo-mundo.jpg',
-    'description':'Aplicación disponible para sistema iOs, que te permite poner a la venta tu material reciclable al por mayor o por menor...! La idea es cuidar al planeta y a la vez recibir un pago por esto...!',
-'price':'Suscripción $20.00 MXN'});
+addItem({
+    'name': 'ReciclApp',
+    'img': 'https://www.raeeandalucia.es/sites/default/files/images/signo-reciclaje-fondo-mundo.jpg',
+    'description': 'Aplicación disponible para sistema iOs, que te permite poner a la venta tu material reciclable al por mayor o por menor...! La idea es cuidar al planeta y a la vez recibir un pago por esto...!',
+    'price': 'Suscripción $20.00 MXN'
+});
+
+addItem({
+    'name': 'E-learning',
+    'img': 'https://www.itconsultors.com/images/blog/teaserbox_954157418.jpg',
+    'description': 'Crea tu e-learning con SOFTWARE SPHERE y lleva tu conocimiento de enseñanza acabo con ayuda de medios digitales y tecnologías de la información comunicación.',
+    'price': '$500 .00 MXN'
+});
+
