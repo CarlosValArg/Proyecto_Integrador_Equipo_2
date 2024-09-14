@@ -15,10 +15,10 @@ navbar.insertAdjacentHTML("beforeend", `
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" id="servicios" aria-current="page" href="#">Servicios</a>
+                <a class="nav-link" id="servicios" aria-current="page" href="../paginaServicios/ListaProductos.html">Servicios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="acerca" href="../acercade/acercade.html">Acerca de</a>
+                <a class="nav-link" id="acerca" href="../acercade/acercade.html">Acercade</a>
               </li>
             
               <div id="contacto">
