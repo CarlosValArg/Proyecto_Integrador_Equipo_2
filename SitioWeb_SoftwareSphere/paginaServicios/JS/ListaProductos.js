@@ -54,3 +54,10 @@ addItem({
     'description': 'Ofrecemos soluciones para teléfonos Android, dispositivos portátiles y otros aparatos del ecosistema Android.',
     'price': 'Suscripción $25.00 MXN'
 });
+
+addItem({
+    'name': 'Foros Comunitarios',
+    'img': 'https://cdn.femashr.com/wp-content/uploads/2021/04/img-personnel-fearture8@2x.png',
+    'description':'Nuestro servicio de desarrollo de foros te permite crear espacios en línea donde tus miembros puedan conectarse, compartir ideas y colaborar ',
+    'price': 'Suscripción $500.00 MXN'
+});
