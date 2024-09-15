@@ -61,3 +61,17 @@ addItem({
     'description':'Nuestro servicio de desarrollo de foros te permite crear espacios en línea donde tus miembros puedan conectarse, compartir ideas y colaborar ',
     'price': 'Suscripción $500.00 MXN'
 });
+
+addItem({
+    'name': 'Portafolio Web',
+    'img': 'https://img.freepik.com/vector-premium/idea-creativa-conceptos-diseno-linea-portafolio-digital-caracter_269730-321.jpg?w=740',
+    'description':'Presentación de contenidos digitales de tus mejores proyectos. ',
+    'price': 'Suscripción $300.00 MXN'
+});
+
+addItem({
+    'name': 'Diseño de Experiencia de Usuario',
+    'img': 'https://img.freepik.com/vector-gratis/ilustracion-concepto-diferencias-ui-ux_114360-14909.jpg?t=st=1726373327~exp=1726376927~hmac=83b54cdb1657e41cf2107d2c19c7076e90d1a78b2184d4d3e1fc28cc1a707edf&w=740',
+    'description':'Creamos interfaces intuitivas y atractivas orientadas al usuario que maximizan la usabilidad y la satisfacción de colaboradores, proveedores y clientes. ',
+    'price': 'Suscripción $350.00 MXN'
+});
