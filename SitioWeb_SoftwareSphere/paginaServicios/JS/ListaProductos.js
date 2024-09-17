@@ -96,3 +96,17 @@ addItem({
     'description': 'Gestiona de manera automática el procesamiento de pagos, suscripciones y facturación con plataformas de pago como Stripe o PayPal.',
     'price': 'Cotiza aqui'
 });
+
+addItem({
+    'name': 'Fintech',
+    'img': 'https://cdn-icons-png.flaticon.com/256/3186/3186911.png',
+    'description':'Desarrollamos soluciones financieras digitales personalizadas para pagos, banca y automatización, mejorando la eficiencia y seguridad de tu negocio.',
+    'price': '$550.00 MXN'
+});
+
+addItem({
+    'name': 'Health & Fitness Apps',
+    'img': 'https://cdn-icons-png.flaticon.com/256/9227/9227553.png',
+    'description':'Aplicaciones para monitorear la salud y el bienestar, desde el seguimiento de ejercicios y nutrición hasta recordatorios de medicación y chequeos médicos.',
+    'price': '$700.00 MXN'
+});
