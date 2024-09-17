@@ -75,3 +75,24 @@ addItem({
     'description':'Creamos interfaces intuitivas y atractivas orientadas al usuario que maximizan la usabilidad y la satisfacción de colaboradores, proveedores y clientes. ',
     'price': 'Suscripción $350.00 MXN'
 });
+
+addItem({
+    'name': 'Chat Bot para empresas',
+    'img': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBsR1MLm-CYSh4W50Uhtp9UFKnM_EclSrFdw&s',
+    'description': 'Atiende a tus clientes 24/7. Fácil integración a tu sitio web, y respuestas automáticas. Ofrece atención también a través de tus redes sociales.',
+    'price': 'Cotiza aqui'
+});
+
+addItem({
+    'name': 'Servicios de Autenticacion',
+    'img': 'https://www.redeszone.net/app/uploads-redeszone.net/2020/06/diferencias-autenticacion-autorizacion-3-1200x675.jpg',
+    'description': 'Ofrecemos servicios de autenticación seguros y personalizados para proteger tu plataforma digital. Implementamos soluciones adaptadas a las necesidades de tu negocio.',
+    'price': 'Cotiza aqui'
+});
+
+addItem({
+    'name': 'Procesamiento de pagos',
+    'img': 'https://cdn.prod.website-files.com/632ea1956f3e9d4d62987e64/649b4e7324cc9d1153009384_Headers_Contenido2.webp',
+    'description': 'Gestiona de manera automática el procesamiento de pagos, suscripciones y facturación con plataformas de pago como Stripe o PayPal.',
+    'price': 'Cotiza aqui'
+});
