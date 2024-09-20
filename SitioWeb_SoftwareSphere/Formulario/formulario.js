@@ -1,107 +1,96 @@
-const btnAgregar = document.getElementById("btnAgregar");
-const btnModificar = document.getElementById("btnModificar");
 const campoImg = document.getElementById("imgProducto");
 const campoTitulo = document.getElementById("tituloProducto");
 const campoDesc = document.getElementById("descripcionProducto");
 const campoPrecio = document.getElementById("precioProducto");
+const form = document.querySelector('.needs-validation');
 
-// función de validación para mostrar mensajes de alerta
-(function() {
-    'use strict';
-  
-    window.addEventListener('load', function() {
-      var form = document.getElementsByClassName('needs-validation')[0];
-  
-      // Evento para la validación del formulario al enviar
-      form.addEventListener('submit', function(event) {
-        var precioField = document.getElementById('precioProducto');
-        var precioValue = precioField.value;
-  
-        var imagenField = document.getElementById('imgProducto');
-        var imagenValue = imagenField.value;
-  
-        // Verificar si el valor del precio es válido
-        if (precioValue <= 0) {
-          precioField.classList.add('is-invalid');
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          precioField.classList.remove('is-invalid');
-          precioField.classList.add('is-valid');
-        }
-  
-        // Verificar si se ha seleccionado una imagen
-        if (imagenValue === "") {
-          imagenField.classList.add('is-invalid');
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          imagenField.classList.remove('is-invalid');
-          imagenField.classList.add('is-valid');
-        }
-  
-        // Validar el formulario completo
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-  
-        form.classList.add('was-validated');
-      }, false);
-  
-      // Evento de entrada para el campo precio para validar mientras el usuario escribe
-      var precioField = document.getElementById('precioProducto');
-      precioField.addEventListener('input', function() {
-        var precioValue = precioField.value;
+// Función para mostrar alertas de Bootstrap
+function mostrarAlerta(mensaje) {
+    const alerta = document.createElement('div');
+    alerta.className = 'alert alert-danger alert-dismissible fade show';
+    alerta.role = 'alert';
+    alerta.innerHTML = `${mensaje} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+    document.body.insertBefore(alerta, form);
+}
 
-        var precioRegex = /^(?!0)\d+(\.\d{1,2})?$/;
-  
-        if (precioRegex.test(precioValue) && precioValue > 0) {
-          precioField.classList.remove('is-invalid');
-          precioField.classList.add('is-valid');
-        } else {
-          precioField.classList.remove('is-valid');
-          precioField.classList.add('is-invalid');
-        }
-      });
-  
-      // Evento de cambio para el campo de imagen para validar cuando el usuario selecciona una imagen
-      var imagenField = document.getElementById('imgProducto');
-      imagenField.addEventListener('change', function() {
-        var imagenValue = imagenField.value;
-  
-        if (imagenValue !== "") {
-          imagenField.classList.remove('is-invalid');
-          imagenField.classList.add('is-valid');
-        } else {
-          imagenField.classList.remove('is-valid');
-          imagenField.classList.add('is-invalid');
-        }
-      });
-  
-    }, false);
-  })();
-  
-  btnAgregar.addEventListener("click", function (event){
-    event.preventDefault();
-    if (!imgProducto.value && !tituloProducto && !descripcionProducto && !precioProducto) {
-        return;
-    }
-    const productoInfo = {
-            "imgProducto" : imgProducto.value,
-            "tituloProducto" : tituloProducto.value,
-            "descripcionProducto" : descripcionProducto.value,
-            "precioProducto" : precioProducto.value};
-            
-    // Obtener los productos existentes del localStorage
-    const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
-    existingProducts.push(productoInfo);
-
-    // Guardar la nueva lista de productos en localStorage
-    localStorage.setItem('productos', JSON.stringify(existingProducts));
-
-    
-
-    
+// Validación en tiempo real para el campo Título
+campoTitulo.addEventListener('input', function() {
+    campoTitulo.classList.toggle('is-invalid', campoTitulo.value.trim() === "");
+    campoTitulo.classList.toggle('is-valid', campoTitulo.value.trim() !== "");
 });
 
+// Validación en tiempo real para el campo Descripción
+campoDesc.addEventListener('input', function() {
+    campoDesc.classList.toggle('is-invalid', campoDesc.value.trim() === "");
+    campoDesc.classList.toggle('is-valid', campoDesc.value.trim() !== "");
+});
+
+// Validación en tiempo real para el campo Precio
+campoPrecio.addEventListener('input', function() {
+    const precioValue = campoPrecio.value;
+    const precioRegex = /^(?!0)\d+(\.\d{1,2})?$/;
+
+    const isValid = precioRegex.test(precioValue) && precioValue > 0;
+    campoPrecio.classList.toggle('is-invalid', !isValid);
+    campoPrecio.classList.toggle('is-valid', isValid);
+});
+
+// Configuración de Cloudinary
+const myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dylf0o4fh', // Reemplaza con tu Cloud Name
+    uploadPreset: 'ml_default' // Reemplaza con tu Upload Preset
+}, (error, result) => {
+    if (!error && result && result.event === "success") {
+        campoImg.value = result.info.secure_url; // URL de la imagen subida
+        campoImg.classList.remove('is-invalid');
+        campoImg.classList.add('is-valid');
+    }
+});
+
+// Llama al widget de Cloudinary al hacer clic en el botón de seleccionar archivo
+document.getElementById("uploadButton").addEventListener('click', function() {
+    myWidget.open();
+});
+
+// Validación al enviar el formulario
+form.addEventListener('submit', function(event) {
+    let isValid = true;
+
+    // Verificar todos los campos
+    [campoTitulo, campoDesc, campoPrecio, campoImg].forEach(field => {
+        if (field.value.trim() === "" || (field === campoPrecio && campoPrecio.value <= 0)) {
+            field.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            field.classList.remove('is-invalid');
+            field.classList.add('is-valid');
+        }
+    });
+
+    if (!isValid) {
+        event.preventDefault(); // Evitar el envío si hay campos inválidos
+        event.stopPropagation();
+        mostrarAlerta("Por favor, completa todos los campos correctamente.");
+    } else {
+        // Crear el modelo de datos en formato JSON
+        const productoInfo = {
+            imgProducto: campoImg.value, // URL de la imagen en Cloudinary
+            tituloProducto: campoTitulo.value,
+            descripcionProducto: campoDesc.value,
+            precioProducto: parseFloat(campoPrecio.value).toFixed(2) // Asegurarse de que el precio tenga 2 decimales
+        };
+
+        // Guardar la información en localStorage (opcional)
+        const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
+        existingProducts.push(productoInfo);
+        localStorage.setItem('productos', JSON.stringify(existingProducts));
+
+        // Opcional: Limpiar el formulario después de agregar
+        form.reset();
+        [campoImg, campoTitulo, campoDesc, campoPrecio].forEach(field => {
+            field.classList.remove('is-valid', 'is-invalid');
+        });
+    }
+
+    form.classList.add('was-validated');
+});
