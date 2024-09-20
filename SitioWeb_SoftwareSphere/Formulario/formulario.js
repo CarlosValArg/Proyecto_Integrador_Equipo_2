@@ -1,110 +1,98 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const campoImg = document.getElementById("imgProducto");
-  const campoTitulo = document.getElementById("tituloProducto");
-  const campoDesc = document.getElementById("descripcionProducto");
-  const campoPrecio = document.getElementById("precioProducto");
-  const form = document.querySelector('.needs-validation');
+const campoImg = document.getElementById("imgProducto");
+const campoTitulo = document.getElementById("tituloProducto");
+const campoDesc = document.getElementById("descripcionProducto");
+const campoPrecio = document.getElementById("precioProducto");
+const form = document.querySelector('.needs-validation');
 
-  // ValidaciÃ³n en tiempo real para el campo TÃ­tulo
-  campoTitulo.addEventListener('input', function() {
-      if (campoTitulo.value.trim() !== "") {
-          campoTitulo.classList.remove('is-invalid');
-          campoTitulo.classList.add('is-valid');
-      } else {
-          campoTitulo.classList.remove('is-valid');
-          campoTitulo.classList.add('is-invalid');
-      }
-  });
+// Función para mostrar alertas de Bootstrap
+function mostrarAlerta(mensaje) {
+    const alerta = document.createElement('div');
+    alerta.className = 'alert alert-danger alert-dismissible fade show';
+    alerta.role = 'alert';
+    alerta.innerHTML = `${mensaje} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+    document.body.insertBefore(alerta, form);
+}
 
-  // ValidaciÃ³n en tiempo real para el campo DescripciÃ³n
-  campoDesc.addEventListener('input', function() {
-      if (campoDesc.value.trim() !== "") {
-          campoDesc.classList.remove('is-invalid');
-          campoDesc.classList.add('is-valid');
-      } else {
-          campoDesc.classList.remove('is-valid');
-          campoDesc.classList.add('is-invalid');
-      }
-  });
+// Validación en tiempo real para el campo Tí­tulo
+campoTitulo.addEventListener('input', function() {
+    campoTitulo.classList.toggle('is-invalid', campoTitulo.value.trim() === "");
+    campoTitulo.classList.toggle('is-valid', campoTitulo.value.trim() !== "");
+});
 
-  // ValidaciÃ³n en tiempo real para el campo Precio
-  campoPrecio.addEventListener('input', function() {
-      const precioValue = campoPrecio.value;
-      const precioRegex = /^(?!0)\d+(\.\d{1,2})?$/;
+// ValidaciÃ³n en tiempo real para el campo Descripción
+campoDesc.addEventListener('input', function() {
+    campoDesc.classList.toggle('is-invalid', campoDesc.value.trim() === "");
+    campoDesc.classList.toggle('is-valid', campoDesc.value.trim() !== "");
+});
 
-      if (precioRegex.test(precioValue) && precioValue > 0) {
-          campoPrecio.classList.remove('is-invalid');
-          campoPrecio.classList.add('is-valid');
-      } else {
-          campoPrecio.classList.remove('is-valid');
-          campoPrecio.classList.add('is-invalid');
-      }
-  });
+// Validación en tiempo real para el campo Precio
+campoPrecio.addEventListener('input', function() {
+    const precioValue = campoPrecio.value;
+    const precioRegex = /^(?!0)\d+(\.\d{1,2})?$/;
 
-  // ConfiguraciÃ³n de Cloudinary
-  const myWidget = cloudinary.createUploadWidget({
-      cloudName: 'dylf0o4fh', // Reemplaza con tu Cloud Name
-      uploadPreset: 'ml_default' // Reemplaza con tu Upload Preset
-  }, (error, result) => {
-      if (!error && result && result.event === "success") {
-          // Guardar la URL de la imagen en el campo de entrada
-          campoImg.value = result.info.secure_url; // URL de la imagen subida
-          campoImg.classList.remove('is-invalid');
-          campoImg.classList.add('is-valid');
-      }
-  });
+    const isValid = precioRegex.test(precioValue) && precioValue > 0;
+    campoPrecio.classList.toggle('is-invalid', !isValid);
+    campoPrecio.classList.toggle('is-valid', isValid);
+});
 
-  // Llama al widget de Cloudinary al hacer clic en el botÃ³n de seleccionar archivo
-  campoImg.addEventListener('click', function() {
-      myWidget.open();
-  });
+// Configuración de Cloudinary
+const myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dylf0o4fh', // Reemplaza con tu Cloud Name
+    uploadPreset: 'ml_default' // Reemplaza con tu Upload Preset
+}, (error, result) => {
+    if (!error && result && result.event === "success") {
+        campoImg.value = result.info.secure_url; // URL de la imagen subida
+        campoImg.classList.remove('is-invalid');
+        campoImg.classList.add('is-valid');
+    }
+});
 
-  // ValidaciÃ³n al enviar el formulario
-  form.addEventListener('submit', function(event) {
-      let isValid = true;
+// Llama al widget de Cloudinary al hacer clic en el botón de seleccionar archivo
+document.getElementById("uploadButton").addEventListener('click', function() {
+    myWidget.open();
+});
 
-      // Verificar todos los campos
-      [campoTitulo, campoDesc, campoPrecio, campoImg].forEach(field => {
-          if (field.value.trim() === "" || (field === campoPrecio && campoPrecio.value <= 0)) {
-              field.classList.add('is-invalid');
-              isValid = false;
-          } else {
-              field.classList.remove('is-invalid');
-              field.classList.add('is-valid');
-          }
-      });
+// Validación al enviar el formulario
+form.addEventListener('submit', function(event) {
+    let isValid = true;
 
-      if (!isValid) {
-          event.preventDefault(); // Evitar el envÃ­o si hay campos invÃ¡lidos
-          event.stopPropagation();
-      } else {
-          // Guardar informaciÃ³n en localStorage
-          const productoInfo = {
-              imgProducto: campoImg.value, // URL de la imagen en Cloudinary
-              tituloProducto: campoTitulo.value,
-              descripcionProducto: campoDesc.value,
-              precioProducto: campoPrecio.value
-          };
+    // Verificar todos los campos
+    [campoTitulo, campoDesc, campoPrecio, campoImg].forEach(field => {
+        if (field.value.trim() === "" || (field === campoPrecio && campoPrecio.value <= 0)) {
+            field.classList.add('is-invalid');
+            isValid = false;
+        } else {
+            field.classList.remove('is-invalid');
+            field.classList.add('is-valid');
+        }
+    });
 
-          // Obtener los productos existentes del localStorage
-          const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
-          existingProducts.push(productoInfo);
+    if (!isValid) {
+        event.preventDefault(); // Evitar el enví­o si hay campos inválidos
+        event.stopPropagation();
+        mostrarAlerta("Por favor, completa todos los campos correctamente.");
+    } else {
+        // Crear el modelo de datos en formato JSON
+        const productoInfo = {
+            imgProducto: campoImg.value, // URL de la imagen en Cloudinary
+            tituloProducto: campoTitulo.value,
+            descripcionProducto: campoDesc.value,
+            precioProducto: parseFloat(campoPrecio.value).toFixed(2) // Asegurarse de que el precio tenga 2 decimales
+        };
 
-          // Guardar la nueva lista de productos en localStorage
-          localStorage.setItem('productos', JSON.stringify(existingProducts));
+        // Guardar la información en localStorage (opcional)
+        const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
+        existingProducts.push(productoInfo);
+        localStorage.setItem('productos', JSON.stringify(existingProducts));
 
-          // Opcional: Limpiar el formulario despuÃ©s de agregar
-          form.reset();
-          [campoImg, campoTitulo, campoDesc, campoPrecio].forEach(field => {
-              field.classList.remove('is-valid', 'is-invalid');
-          });
-      }
+        // Opcional: Limpiar el formulario después de agregar
+        form.reset();
+        [campoImg, campoTitulo, campoDesc, campoPrecio].forEach(field => {
+            field.classList.remove('is-valid', 'is-invalid');
+        });
+    }
 
-      form.classList.add('was-validated');
-  });
-
-
-  
+    form.classList.add('was-validated');
 });
 
 

@@ -110,3 +110,35 @@ addItem({
     'description':'Aplicaciones para monitorear la salud y el bienestar, desde el seguimiento de ejercicios y nutrición hasta recordatorios de medicación y chequeos médicos.',
     'price': '$700.00 MXN'
 });
+function addItem(item) {
+    const itemHTML = `
+        <div class="card" style="background-color: #a5d7e8; width: 18rem; align-items: flex-end;">
+            <img src="${item.img}" class="card-img-top" alt="image" style="height: 262px; width: 262px; margin: 10px 0px 0px 0px; border-radius: 10px;">
+            <div class="card-body">
+                <h5 class="card-title" style="font-size: 30px; text-align: center; margin: 0px 0px 20px 0px;">${item.name}</h5>
+                <p class="card-text" style="font-size: 20px; height: 262px; width: 262px; text-align: left; padding: 0px 20px 0px 20px;">${item.description}</p>
+                <p class="card-text" style="font-size: 15px; padding: 0px 20px 0px 20px; text-align: center;">${item.price}</p>
+                <a href="#" class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; display: flex; justify-content: center; align-items: center; margin: 10px 10px 10px 30px;">Agregar al carrito</a>
+            </div>
+        </div>
+        <br/>
+    `;
+    const itemsContainer = document.getElementById("list-items");
+    itemsContainer.innerHTML += itemHTML;
+  }
+  
+  // Cargar productos desde localStorage
+  function cargarProductos() {
+    const productos = JSON.parse(localStorage.getItem('productos')) || [];
+    productos.forEach(producto => {
+        addItem({
+            name: producto.tituloProducto,
+            img: producto.imgProducto,
+            description: producto.descripcionProducto,
+            price: `${producto.precioProducto} MXN`
+        });
+    });
+  }
+  
+  // Cargar productos al cargar la página
+  document.addEventListener('DOMContentLoaded', cargarProductos);
