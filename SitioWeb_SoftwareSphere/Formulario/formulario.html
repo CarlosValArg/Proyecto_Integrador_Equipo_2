@@ -16,44 +16,49 @@
     <div id="navbar"></div>
 
     <div class="container">
-        <form>
+        <form class="needs-validation" novalidate>
 <!-- Añadir imagen o archivo -->
-        <div class="form-group col-md-4">
-            <label for="exampleFormControlFile1">Selecciona una imagen para el producto</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
+<div class="form-group col-md-4">
+    <label for="validationServerimg">Selecciona una imagen para el producto</label>
+    <input type="file" class="form-control-file" id="imgProducto" required>
+    <div class="invalid-feedback">
+      Debes seleccionar una imagen.
+    </div>
+</div>
+  
 <!-- Formulario para agregar información String e int del producto -->
         <div class="form-row">
         <div class="col-md-4 mb-3">
             <label for="validationServer01">Título</label>
-            <input type="text" class="form-control" id="validationServer01" placeholder="Título del producto" required>
-            <div class="valid-feedback">
+            <input type="text" class="form-control" id="tituloProducto" placeholder="Título del producto" required>
+            <div class="invalid-feedback">
+                Ingresa un título.
             </div>
         </div>
         </div> 
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="validationServer03">Descripción</label>
-            <input type="text" class="form-control" id="validationServer03" placeholder="Breve descripción de app/servicio web" required>
+            <label for="validationServer02">Descripción</label>
+            <input type="text" class="form-control" id="descripcionProducto" placeholder="Breve descripción de app/servicio web" required>
             <div class="invalid-feedback">
-              
+              Ingresa una descripción.
             </div>
           </div>    
           <div class="col-md-4 mb-3">
-            <label for="validationServerUsername">Precio</label>
+            <label for="validationServerPrecio">Precio</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroupPrepend3">$</span>
               </div>
-              <input type="number" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" placeholder="Ingresa precio" required>
+              <input type="number" class="form-control" id="precioProducto" aria-describedby="inputGroupPrepend3" placeholder="Ingresa precio" required>
               <div class="invalid-feedback">
-                
+                El precio debe ser mayor que 0 y debe tener 2 decimales.
               </div>
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Agregar</button>
-        <button class="btn btn-primary" type="submit">Modificar</button>
+        <button class="btn btn-primary" id="btnAgregar" type="submit">Agregar</button>
+        <button class="btn btn-primary" id="btnModificar" type="submit">Modificar</button>
       </form>
     </div>
 <!-- Footer -->
@@ -63,5 +68,6 @@
     crossorigin="anonymous"></script>
     <script src="../Contenedores.js/navbar-footer.js" defer></script>
     <script src="../acercade/JS/functions.js" defer></script>
+    <script src="formulario.js"></script>
 </body>
 </html>
