@@ -141,4 +141,4 @@ function addItem(item) {
   }
   
   // Cargar productos al cargar la página
-  document.addEventListener('DOMContentLoaded', cargarProductos);
+  document.addEventListener('load', cargarProductos);
