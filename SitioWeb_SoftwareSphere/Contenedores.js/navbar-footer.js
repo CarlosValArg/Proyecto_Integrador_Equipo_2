@@ -18,7 +18,7 @@ navbar.insertAdjacentHTML("beforeend", `
                 <a class="nav-link" id="servicios" aria-current="page" href="../paginaServicios/ListaProductos.html">Servicios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="acerca" href="../acercade/acercade.html">Acerca de</a>
+                <a class="nav-link" id="acerca" href="../acercade/acercade.html">Nosotros</a>
               </li>
 
               </li>

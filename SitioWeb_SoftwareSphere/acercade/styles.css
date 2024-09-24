@@ -193,3 +193,10 @@ h6{
 a{
     font-size: 20px;
 }
+
+#formimg{
+   float: left;
+   position: fixed;
+   margin-left: 1000px;
+   width: 550px;
+}
