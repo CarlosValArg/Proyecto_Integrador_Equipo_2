@@ -2,42 +2,39 @@ const navbar = document.getElementById("navbar")
 const footer = document.getElementById("footer1")
  
 navbar.insertAdjacentHTML("beforeend", `
-       <!--Navbar-->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            
-            <class class="container">
-                <img src="../acercade/assets/gray.png" alt="log" width="150px">
-            </class> 
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <div class="navbar-brand">
+              <img src="../acercade/assets/gray.png" alt="logo" width="150px">
+          </div> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" id="servicios" aria-current="page" href="../paginaServicios/ListaProductos.html">Servicios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="acerca" href="../acercade/acercade.html">Nosotros</a>
-              </li>
-
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="acerca" href="../Formulario/formulario.html">Formulario</a>
-              </li>
-            
-              <div id="contacto">
-                <li class="nav-item">
-                <a class="nav-link"  href="../paginaContacto/contacto.html">Contáctanos</a>
-              </li>
-              </div>
-           
-              <button class="btn-button1">Ingresar</button>
-              <button class="btn-button2">Registrarse</button>
-            </form>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" id="servicios" aria-current="page" href="../paginaServicios/ListaProductos.html">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="acerca" href="../acercade/acercade.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="acerca" href="../Formulario/formulario.html">Formulario</a>
+                  </li>
+                  <div id="contacto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="../paginaContacto/contacto.html">Contáctanos</a>
+                      </li>
+                  </div>
+                  <button class="btn-button1">Ingresar</button>
+                  <button class="btn-button2">Registrarse</button>
+              </ul>
           </div>
-        </div>
-      </nav>`);
+      </div>
+  </nav>
+`);
+
 
       footer.insertAdjacentHTML("beforeend",`
         <!-- Footer -->
@@ -103,13 +100,13 @@ navbar.insertAdjacentHTML("beforeend", `
             Desarrollo de Apps
           </h6>
           <p>
-            <a href="#!" class="text-reset">Apps ¡OS</a>
+            <a href="#!" class="text-reset">Apps iOS</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Apps Android</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Apps Smart Wacht</a>
+            <a href="#!" class="text-reset">Apps Smart Watch</a>
           </p>
          
         </div>
@@ -122,13 +119,13 @@ navbar.insertAdjacentHTML("beforeend", `
             Empresa
           </h6>
           <p>
-            <a href="#!" class="text-reset">Acerca de nosotros.</a>
+            <a href="#!" class="text-reset">Acerca de nosotros</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Misión y visión.</a>
+            <a href="#!" class="text-reset">Misión y visión</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Contáctanos.</a>
+            <a href="#!" class="text-reset">Contáctanos</a>
           </p>
          
         </div>
@@ -137,15 +134,15 @@ navbar.insertAdjacentHTML("beforeend", `
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Comunidad.</h6>
+          <h6 class="text-uppercase fw-bold mb-4">Comunidad</h6>
           <p></p>
-            <a href="#!" class="text-reset">Centro de ayuda.</a>
+            <a href="#!" class="text-reset">Centro de ayuda</a>
           </p>
           <p></p>
-            <a href="#!" class="text-reset">Contrta a un experto.</a>
+            <a href="#!" class="text-reset">Contrata a un experto</a>
           </p>
           <p></p>
-            <a href="#!" class="text-reset">Plataforma de desarrollo.</a>
+            <a href="#!" class="text-reset">Plataforma de desarrollo</a>
           </p>
           <p>
             <i class="fas fa-envelope me-3"></i>
