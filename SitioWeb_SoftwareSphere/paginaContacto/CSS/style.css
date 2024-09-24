@@ -16,7 +16,7 @@
        border-color: var(--color-blue);
        transition: box-shadow 0.2s ease-in-out;
        font-size: 20px;
-   }
+   } 
 
 
    .btn-button1:hover{
@@ -103,6 +103,7 @@ footer{
 
 .text-reset{
     text-decoration: none;
+
 }
 
 
