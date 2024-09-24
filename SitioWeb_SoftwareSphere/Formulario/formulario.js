@@ -69,6 +69,8 @@ form.addEventListener('submit', function(event) {
 
     if (!isValid) {
         event.preventDefault(); // Evitar el enví­o si hay campos inválidos
+        event.stopPropagation();
+        mostrarAlerta("Por favor, completa todos los campos correctamente.");
     } else {
         // Crear el modelo de datos en formato JSON
         const productoInfo = {
