@@ -13,21 +13,11 @@ function mostrarAlerta(mensaje) {
     document.body.insertBefore(alerta, form);
 }
 
-<<<<<<< HEAD
-// Validación en tiempo real para el campo Título
-=======
-// Validación en tiempo real para el campo Tí­tulo
->>>>>>> 1fc3444bfe8dfe0eec07dd38fe47a5fddf96ee53
 campoTitulo.addEventListener('input', function() {
     campoTitulo.classList.toggle('is-invalid', campoTitulo.value.trim() === "");
     campoTitulo.classList.toggle('is-valid', campoTitulo.value.trim() !== "");
 });
 
-<<<<<<< HEAD
-// Validación en tiempo real para el campo Descripción
-=======
-// ValidaciÃ³n en tiempo real para el campo Descripción
->>>>>>> 1fc3444bfe8dfe0eec07dd38fe47a5fddf96ee53
 campoDesc.addEventListener('input', function() {
     campoDesc.classList.toggle('is-invalid', campoDesc.value.trim() === "");
     campoDesc.classList.toggle('is-valid', campoDesc.value.trim() !== "");
@@ -76,11 +66,7 @@ form.addEventListener('submit', function(event) {
     });
 
     if (!isValid) {
-<<<<<<< HEAD
-        event.preventDefault(); // Evitar el envío si hay campos inválidos
-=======
-        event.preventDefault(); // Evitar el enví­o si hay campos inválidos
->>>>>>> 1fc3444bfe8dfe0eec07dd38fe47a5fddf96ee53
+        event.preventDefault(); // Evitar el envío si hay campos inválido
         event.stopPropagation();
         mostrarAlerta("Por favor, completa todos los campos correctamente.");
     } else {
@@ -106,8 +92,3 @@ form.addEventListener('submit', function(event) {
 
     form.classList.add('was-validated');
 });
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 1fc3444bfe8dfe0eec07dd38fe47a5fddf96ee53
