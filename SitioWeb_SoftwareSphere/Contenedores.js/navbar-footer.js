@@ -41,30 +41,26 @@ footer.insertAdjacentHTML("beforeend", `
   <!-- Footer -->
   <footer class="container-fluid text-center text-lg-start bg-blue text-muted" id="footer1">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div class="me-5 d-none d-lg-block">
-        <span>Contáctanos en nuestras redes sociales:</span>
-      </div>
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+    <section <div id="footer1" class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-light mx-1">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="btn btn-outline-light mx-1">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="btn btn-outline-light mx-1">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.google.com" target="_blank" class="btn btn-outline-light mx-1">
+                    <i class="bi bi-google"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
 
     <!-- Section: Links  -->
@@ -101,13 +97,14 @@ footer.insertAdjacentHTML("beforeend", `
       </div>
     </section>
 
-    <!-- Copyright -->
+    <!-- Copyrigth -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2024 Copyright
+      © 2024 Copyrigth
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Software Sphere</a>
     </div>
   </footer>
-`);
+
+  `);
 
 
     
