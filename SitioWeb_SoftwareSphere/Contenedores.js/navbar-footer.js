@@ -28,7 +28,7 @@ navbar.insertAdjacentHTML("beforeend", `
                   </li>
               </ul>
               <div class="d-flex align-items-center">
-                  <button class="btn-button1">Ingresar</button>
+                  <button class="btn-button1">Ingresar</button>                 
                   <button class="btn-button2">Registrarse</button>
               </div>
           </div>

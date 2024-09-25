@@ -13,11 +13,13 @@ function mostrarAlerta(mensaje) {
     document.body.insertBefore(alerta, form);
 }
 
+// Validación en tiempo real para el campo Tí­tulo
 campoTitulo.addEventListener('input', function() {
     campoTitulo.classList.toggle('is-invalid', campoTitulo.value.trim() === "");
     campoTitulo.classList.toggle('is-valid', campoTitulo.value.trim() !== "");
 });
 
+// ValidaciÃ³n en tiempo real para el campo Descripción
 campoDesc.addEventListener('input', function() {
     campoDesc.classList.toggle('is-invalid', campoDesc.value.trim() === "");
     campoDesc.classList.toggle('is-valid', campoDesc.value.trim() !== "");
@@ -66,7 +68,7 @@ form.addEventListener('submit', function(event) {
     });
 
     if (!isValid) {
-        event.preventDefault(); // Evitar el envío si hay campos inválido
+        event.preventDefault(); // Evitar el enví­o si hay campos inválidos
         event.stopPropagation();
         mostrarAlerta("Por favor, completa todos los campos correctamente.");
     } else {
@@ -92,3 +94,5 @@ form.addEventListener('submit', function(event) {
 
     form.classList.add('was-validated');
 });
+
+
