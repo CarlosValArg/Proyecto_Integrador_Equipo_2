@@ -1,0 +1,104 @@
+/* Navbar*/
+:root{
+    --color-blue: #576CBC;
+   }
+   
+   .navbar{
+       background-color: #19376D;
+   }
+   
+   .btn-button1{
+       background-color: white;
+       border-color: white;
+       color: black;
+       margin-left: 50px;
+       border-radius: 8px;
+       border-color: var(--color-blue);
+       transition: box-shadow 0.2s ease-in-out;
+       font-size: 20px;
+   }
+   .btn-button1:hover{
+       box-shadow: 0 0 40px var(--color-blue) inset;
+   }
+   
+   .btn-button2{
+       background-color: #576CBC;
+       border-color: #576CBC;
+       color: white;
+       margin-left: 10px;
+       border-radius: 8px;
+       font-size: 20px;
+    
+      }
+   
+   .nav-link{
+       color: white;
+       font-size: 24px;
+   }
+   .navbar-brand{
+       color: white;
+   }
+   
+   .body{
+       font-family: Arial, Helvetica, sans-serif;
+       overflow-x: hidden; 
+   }
+   
+   .navbar-toggler{
+       border-color: black;
+       background-color: #576CBC;
+   }
+
+#contacto{
+    margin-right: 80px;
+}
+
+@media(max-width:576px) {
+    /* Navbar */
+    .navbar {
+        display: flex; /* Usar flexbox */
+        justify-content: space-between; /* Espacio entre el logo y el botón */
+        align-items: center; /* Alinear verticalmente */
+        padding: 10px; /* Espaciado interno */
+        position: relative; /* Para el posicionamiento */
+    }
+
+    .navbar-brand {
+        margin-left: 0; /* Asegúrate de que el margen sea 0 */
+        flex-grow: 1; /* Permite que el logo ocupe el espacio disponible */
+    }
+
+    .navbar-toggler {
+        position: absolute; /* Posicionamiento absoluto */
+        top: 20px; /* Ajusta según sea necesario */
+        right: 20px; /* Espacio a la derecha del botón */
+        border-color: black;
+        background-color: #576CBC;
+    }
+
+    /* Contenedor de los enlaces */
+    .nav-links {
+        display: flex; /* Usar flexbox para los enlaces */
+        flex-direction: column; /* Colocar los enlaces en columna */
+        align-items: flex-start; /* Alinear a la izquierda */
+        margin-left: 20px; /* Espacio a la izquierda */
+        margin-top: 50px; /* Espacio debajo del navbar */
+    }
+
+    /* Contenedor de los botones */
+    .container {
+        display: flex; /* Cambia a flexbox */
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-button1,
+    .btn-button2 {
+        width: 200px; /* Asegúrate de que ambos botones tengan el mismo ancho */
+        height: 32px; /* Altura de los botones */
+        margin: 8px 0; /* Espacio entre los botones */
+        padding: 0; /* Sin padding adicional */
+    }
+}
