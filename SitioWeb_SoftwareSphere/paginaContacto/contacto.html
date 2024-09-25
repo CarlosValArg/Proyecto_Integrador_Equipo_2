@@ -20,6 +20,7 @@
                 <p>Si deseas consultar mayor información sobre nuestros servicios o tienes alguna duda al respecto, no dudes en solicitar una consultoría gratuita y uno de nuestros asesores te contactará a la brevedad.</p>
 
                 <!-- Icons Section -->
+                 
                 <div class="mt-4">
                     <p><i class="bi bi-telephone-fill"></i> Teléfono: 55-1234-5678</p>
                     <p><i class="bi bi-envelope-at-fill"></i> Correo: email@dominio.com</p>
@@ -33,12 +34,12 @@
             <!-- Right Column: Form -->
 
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                <div id="FormularioResponsive">
-                    <h2 class="text-center">Formulario</h2>
+                <div id="FormularioResponsive" style="background-color: #A5D7E8;">
+                    <h2 class="text-center" style="margin-top: 50px;">Formulario</h2>
                     <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
                         <p id="alertValidacionesTexto"></p>
                     </div>
-                <div class="container" style="padding: 50px; text-align: start; background-color:white; border-radius: 30px; color: black; margin: 60px 0px">
+                <div class="container" style="padding: 30px; text-align: start; background-color:#A5D7E8; border-radius: 30px; color: black; margin: 10px 0px;">
                   <!-- modify this form HTML and place wherever you want your form -->
                   <form
                   action="https://formspree.io/f/mqazjvoe"
@@ -46,7 +47,7 @@
                   >                    
                         <div class="mb-4">
                             <label for="nombre" class="form-label">Nombre(s)</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre(s)">
+                            <input type="text" class="form-control" id="nombre" autofocus name="nombre" placeholder="Nombre(s)">
                         </div>
                         
                         <div class="mb-4">
@@ -70,7 +71,8 @@
                         </div>
                         
                         <div class="col-12">
-                            <button class="btn btn-primary" id="btnEnviar" type="submit">Enviar</button>
+                            <button class="btn btn-primary" id="btnEnviar" 
+                            style="display: block; margin: 20px auto;" type="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -80,7 +82,8 @@
 
 
 
-
+<!-- Footer -->
+<div id="footer1"></div>
 
 
     
@@ -91,8 +94,4 @@
     <script src="./JS/main.js" defer></script>
     
 </body>
-
-<!-- Footer -->
-<div id="footer1"></div>
-
 </html>

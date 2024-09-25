@@ -55,6 +55,13 @@ document.getElementById('btnEnviar').addEventListener('click', function() {
         document.getElementById('correo').style.border = ""; // Restablecer borde si es válido
     }
 
+    if (!isValid) {
+        event.preventDefault(); // Evitar el envío si hay campos inválidos
+        event.stopPropagation();
+      mostrarAlerta("Por favor, completa todos los campos correctamente.");
+   }
+
+
     // Si todo es válido, puedes realizar la acción deseada
     if (isValid) {
         Swal.fire({
