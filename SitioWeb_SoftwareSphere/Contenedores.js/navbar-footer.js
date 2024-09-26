@@ -29,7 +29,7 @@ navbar.insertAdjacentHTML("afterbegin", `
               </ul>
               <div class="d-flex align-items-center">
                   <button class="btn-button1 me-2">Ingresar</button>                 
-                  <button class="btn-button2">Registrarse</button>
+                  <a href="../Registrar/Registrar.html"><button class="btn-button2">Registrarse</button></a>
               </div>
           </div>
       </div>
@@ -40,11 +40,6 @@ navbar.insertAdjacentHTML("afterbegin", `
 footer.insertAdjacentHTML("beforeend", `
   <!-- Footer -->
   <footer class="container-fluid text-center text-lg-start bg-blue text-muted" id="footer1">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div class="me-5 d-none d-lg-block">
-        <span>Contáctanos en nuestras redes sociales:</span>
-      </div>
       <div>
         <a href="" class="me-4 text-reset">
           <i class="fab fa-facebook-f"></i>
@@ -102,7 +97,7 @@ footer.insertAdjacentHTML("beforeend", `
     </section>
 
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-4" style="font-size: medium; background-color: rgba(0, 0, 0, 0.05);">
       © 2024 Copyright
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Software Sphere</a>
     </div>
