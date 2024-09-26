@@ -193,12 +193,14 @@ h5{
 
 /*footer*/
 
-
+footer{
+    background-color:  #A5D7E8;
+}
 
 #footer1{
     position: relative;
     margin-top: 150px ;
-    background-color:  #A5D7E8;
+    
     
 }
 

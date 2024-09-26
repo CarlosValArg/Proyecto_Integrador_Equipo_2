@@ -1,39 +1,16 @@
-@media (min-width: 768px) {
-    .card {
-        width: 300px; /* Ajustar a pantallas medianas o grandes */
-    }
-}
-
-.card-title {
-    font-size: 1.5rem; /* Ajustar el tamaño del título */
-    text-align: left;  /* Alinear el texto a la izquierda */
-    margin-bottom: 10px; /* Agregar margen debajo del título */
-}
-
-.card-text {
-    font-size: 1rem; /* Ajustar el tamaño del texto */
-    text-align: left; /* Alinear texto a la izquierda */
-}
-
-.card-img-top {
-    height: auto; /* Dejar que la imagen se ajuste automáticamente */
-    width: 100%;  /* Ajustar imagen al 100% del ancho de la tarjeta */
+/* Estilos globales para la imagen */
+.card img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-/* Ajustar las tarjetas para que se adapten mejor en pantallas pequeñas */
-@media (max-width: 576px) {
-    .card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .card-title {
-        font-size: 1.3rem; /* Tamaño más pequeño para pantallas móviles */
-    }
-
-    .card-text {
-        font-size: 0.9rem;
+/* Media query para pantallas menores a 990px */
+@media (max-width: 990px) {
+    .card img {
+        height: auto;
+        aspect-ratio: 16/9; /* Proporción 16:9 */
+        object-fit: cover;
     }
 }
