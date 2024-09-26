@@ -48,7 +48,7 @@ h2{
 
 .col-sm{
     margin: 0px 20px 0px 20px;
-    padding: 20 px 0px 20px 0px;
+    padding: 20px 0px 20px 0px;
 }
 h5{
     font-family: 'Roboto', sans-serif;
@@ -105,13 +105,7 @@ h5{
             margin: 0;
             padding: 0;
         }
-
-    
     }
-
-
-
-
 
 /*carrusel*/
 
@@ -126,31 +120,29 @@ h5{
 .card-container {
     display: flex;
     transition: transform 0.5s ease;
-
-
 }
 
+.container-cards {
+    margin-left: 30px;
+}
 
 .card {
-    margin: 0 5px; /* Espacio entre tarjetas */
+    margin: 0 5px 0 5px; /* Espacio entre tarjetas */
+    background: linear-gradient(to bottom right, #5AE0E4, #245065); /* Estilo para el fondo degradado de cada tarjeta */
+    border-radius: 30px; /* Estilo redondeado de las cards */
 }
 
-/* Estilo para el fondo degradado de cada tarjeta */
-.card {
-    background: linear-gradient(to bottom right, #5AE0E4, #245065);
-    border-radius: 30px;
-}
-
-.card .icon {
+.icon {
     width: 24px;  /* Ajusta el ancho */
     height: 24px; /* Ajusta la altura */
-    vertical-align:middle; /* Alinea el ícono con el texto */
-    
+    vertical-align: bottom; /* Alinea el ícono con el texto */;
+    position: absolute;
+    bottom: calc(5%);
 }
 
 /* Efecto al pasar el mouse */
 .card .icon:hover {
-    transform: scale(1.5); /* Aumenta el tamaño a 120% */
+    transform: scale(1.3); /* Aumenta el tamaño a 120% */
     filter: brightness(1.5); /* Aumenta el brillo del ícono */
 }
 
@@ -190,7 +182,6 @@ h5{
     text-align: center; /* Alinear el contenido de cada slide al centro */
 }
 
-
 /*footer*/
 
 footer{
@@ -200,14 +191,11 @@ footer{
 #footer1{
     position: relative;
     margin-top: 150px ;
-    
-    
 }
 
 .text-reset{
     text-decoration: none;
 }
-
 
 h6{
     font-size: 28px;
