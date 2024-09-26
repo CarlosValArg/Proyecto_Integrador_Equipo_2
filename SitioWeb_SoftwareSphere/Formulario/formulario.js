@@ -25,15 +25,6 @@ campoDesc.addEventListener('input', function() {
     campoDesc.classList.toggle('is-valid', campoDesc.value.trim() !== "");
 });
 
-// Validación en tiempo real para el campo Precio
-campoPrecio.addEventListener('input', function() {
-    const precioValue = campoPrecio.value;
-    const precioRegex = /^(?!0)\d+(\.\d{1,2})?$/;
-
-    const isValid = precioRegex.test(precioValue) && precioValue > 0;
-    campoPrecio.classList.toggle('is-invalid', !isValid);
-    campoPrecio.classList.toggle('is-valid', isValid);
-});
 
 // Configuración de Cloudinary
 const myWidget = cloudinary.createUploadWidget({
