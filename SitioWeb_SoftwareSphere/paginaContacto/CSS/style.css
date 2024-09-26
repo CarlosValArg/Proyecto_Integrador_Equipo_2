@@ -71,16 +71,16 @@ body{
 
 
 /* estilos del boton enviar*/
-#btnEnviar{
-    width: 400px;
-
+.btn{
+    display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 18px;
     color: #ffffff;
-    border: 0px;
-    border-radius: 10px;
+    border: 0;
+    border-radius: 15px;
     background-color: #576cbc;
-    box-shadow: 0 0 20px #576cbc;
+    box-shadow: 0 0 20px rgba(52, 218, 216, 0.4);
     cursor: pointer;
 
 }
@@ -89,13 +89,15 @@ body{
     background-color: #576cbc;
 }
 
-
+footer{
+    background-color:  #A5D7E8;
+}
 
 #footer1{
     position: relative;
-    margin-top: 150px;
-    width: 100%;
-    background-color:  #A5D7E8;
+    margin-top: 150px ;
+    
+    
 }
 
 .text-reset{
@@ -111,4 +113,3 @@ h6{
 a{
     font-size: 20px;
 }
-

@@ -1,0 +1,32 @@
+/* Media Query para pantallas de 984px o menos */
+@media (max-width: 984px) {
+    .card {
+      width: 100px; /* Hacemos las tarjetas más anchas para que no se superpongan */
+      margin: 0 auto; /* Centramos las tarjetas */
+    }
+  
+    .card-title {
+      font-size: 20px; /* Reducimos el tamaño del título */
+    }
+  
+    .card-text {
+      font-size: 15; /* Reducimos el tamaño del texto para evitar desbordes */
+    }
+  }
+  
+  /* Media Query para pantallas de 768px o menos (si lo necesitas) */
+  @media (max-width: 768px) {
+    .card {
+      width: 100%; /* Ajustamos el ancho de las tarjetas para pantallas aún más pequeñas */
+      margin-bottom: 20px; /* Añadimos más espacio entre tarjetas si es necesario */
+    }
+  
+    .card-title {
+      font-size: 1rem; /* Ajustamos el tamaño del título para pantallas más pequeñas */
+    }
+  
+    .card-text {
+      font-size: 0.85rem; /* Reducimos el tamaño del texto en pantallas más pequeñas */
+    }
+  }
+  
