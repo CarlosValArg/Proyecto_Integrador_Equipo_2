@@ -1,7 +1,7 @@
 function addItem(item) {
     const itemHTML = `
         <div class="col mb-4 d-flex justify-content-center">
-            <div class="card" style="background-color: #a5d7e8; width: 100%; align-items: flex-start;">
+            <div class="card" style="background-color: #a5d7e8; max-width: 300px; width: 100%; align-items: flex-start;">
                 <img src="${item.img}" class="card-img-top" alt="image" style="height: 200px; width: 100%; object-fit: cover; border-radius: 10px;">
                 <div class="card-body" style="padding: 15px;">
                     <h5 class="card-title" style="font-size: 30px; margin: 0 0 10px; text-align: left;">${item.name}</h5>
