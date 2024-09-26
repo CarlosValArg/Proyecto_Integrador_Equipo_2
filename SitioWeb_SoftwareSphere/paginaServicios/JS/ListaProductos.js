@@ -5,7 +5,7 @@ function addItem(item) {
                 <img src="${item.img}" class="card-img-top" alt="image" style="height: 200px; width: 100%; object-fit: cover; border-radius: 10px;">
                 <div class="card-body" style="padding: 15px;">
                     <h5 class="card-title" style="font-size: 30px; margin: 0 0 10px; text-align: left;">${item.name}</h5>
-                    <p class="card-text" style="font-size: 18px; margin: 0; style="height: 200px; width: 100%; text-align: left;">${item.description}</p>
+                    <p class="card-text" style="font-size: 18px; margin: 0; text-align: left;">${item.description}</p>
                 </div>
                 <div class="text-center" style="padding: 10px;">
                     <a href="#" class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc;">Cotizar</a>
@@ -131,19 +131,20 @@ function añadirItem(item) {
     itemsContainer.innerHTML += itemHTML;
   }
   
-  // Cargar productos desde localStorage
   function cargarProductos() {
+    // Obtener los productos guardados en el localStorage
     const productos = JSON.parse(localStorage.getItem('productos')) || [];
+
+    // Si existen productos, agregarlos al contenedor
     productos.forEach(producto => {
         addItem({
             name: producto.tituloProducto,
             img: producto.imgProducto,
-            description: producto.descripcionProducto,
-            price: `${producto.precioProducto} MXN`
+            description: producto.descripcionProducto
         });
     });
-  }
-  
-  // Cargar productos al cargar la página
-  document.addEventListener('load', cargarProductos);
+}
+
+// Asegúrate de que se ejecuta la función cuando el DOM está completamente cargado
+window.addEventListener('DOMContentLoaded', cargarProductos);
   

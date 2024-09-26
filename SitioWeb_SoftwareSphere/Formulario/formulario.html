@@ -15,49 +15,44 @@
     <div id="navbar"></div>
 
     <div class="container">
-        <form class="needs-validation" novalidate>
-          <div class="form-group col-md-4">
-              <label for="imgProducto">Selecciona una imagen para el producto</label>
-              <input type="text" class="form-control" id="imgProducto" readonly required>
-              <button type="button" class="btn btn-secondary mt-2" id="uploadButton">Subir Imagen</button>
+      <form class="needs-validation" novalidate>
+        <div class="form-group col-md-4">
+            <label for="imgProducto">Selecciona una imagen para el producto</label>
+            <input type="text" class="form-control" id="imgProducto" readonly required>
+            <button type="button" class="btn btn-secondary mt-2" id="uploadButton">Subir Imagen</button>
+            <div class="invalid-feedback">
+              Debes seleccionar una imagen.
+            </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+              <label for="tituloProducto">Título</label>
+              <input type="text" class="form-control" id="tituloProducto" placeholder="Título del producto" required>
               <div class="invalid-feedback">
-                Debes seleccionar una imagen.
+                  Ingresa un título.
               </div>
           </div>
   
-        <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label for="tituloProducto">Tí­tulo</label>
-            <input type="text" class="form-control" id="tituloProducto" placeholder="Tí­tulo del producto" required>
-            <div class="invalid-feedback">
-                Ingresa un título.
-            </div>
-        </div>
-        </div> 
-        <div class="form-row">
           <div class="col-md-4 mb-3">
-            <label for="descripcionProducto">Descripción</label>
-            <input type="text" class="form-control" id="descripcionProducto" placeholder="Breve descripción de app/servicio web" required>
-            <div class="invalid-feedback">
-              Ingresa una descripción.
-            </div>
-          </div>    
-          <div class="col-md-4 mb-3">
-            <label for="precioProducto">Precio</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend3">$</span>
-              </div>
-              <input type="number" class="form-control" id="precioProducto" aria-describedby="inputGroupPrepend3" placeholder="Ingresa precio" required>
+              <label for="descripcionProducto">Descripción</label>
+              <input type="text" class="form-control" id="descripcionProducto" placeholder="Breve descripción de app/servicio web" required>
               <div class="invalid-feedback">
-                El precio debe ser mayor que 0 y debe tener 2 decimales.
+                Ingresa una descripción.
               </div>
-            </div>
+          </div>    
+        </div>
+  
+        <!-- Alineación del botón con los demás campos -->
+        <div class="form-row">
+          <div class="col-md-4">
+              <button class="btn btn-primary w-100" id="btnAgregar" type="submit">Agregar</button>
           </div>
         </div>
-        <button class="btn btn-primary" id="btnAgregar" type="submit">Agregar</button>
+  
       </form>
-    </div>
+  </div>
+  
 <!-- Footer -->
   <div id="footer1"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
