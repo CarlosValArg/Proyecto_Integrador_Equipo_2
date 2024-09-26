@@ -82,6 +82,7 @@ body{
     background-color: #576cbc;
     box-shadow: 0 0 20px rgba(52, 218, 216, 0.4);
     cursor: pointer;
+    width: 400px;
 
 }
 
@@ -89,14 +90,11 @@ body{
     background-color: #576cbc;
 }
 
-footer{
-    background-color:  #A5D7E8;
-}
 
 #footer1{
     position: relative;
     margin-top: 150px ;
-    
+    background-color:  #A5D7E8;
     
 }
 
