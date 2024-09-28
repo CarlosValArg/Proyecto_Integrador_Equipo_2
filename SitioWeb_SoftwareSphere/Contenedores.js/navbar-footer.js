@@ -1,12 +1,16 @@
 const navbar = document.getElementById("navbar");
 const footer = document.getElementById("footer1");
 
-navbar.insertAdjacentHTML("afterbegin", `
+navbar.insertAdjacentHTML("afterbegin",` 
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
           <div class="navbar-brand">
-              <img src="../acercade/assets/gray.png" alt="logo" width="150px">
+          <button="disabled">
+        <a href="../Inicio/index.html">
+        <img src="./assets/gray.png" alt="logo" width="150px">
+        </a>
+        </button>
           </div> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -74,9 +78,9 @@ footer.insertAdjacentHTML("beforeend", `
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">Desarrollo de Apps</h6>
-            <p><a href="#!" class="text-reset">Apps IOS</a></p>
+            <p><a href="#!" class="text-reset">Apps iOS</a></p>
             <p><a href="#!" class="text-reset">Apps Android</a></p>
-            <p><a href="#!" class="text-reset">Apps Smart Wacht</a></p>
+            <p><a href="#!" class="text-reset">Apps Smart Watch</a></p>
           </div>
 
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
