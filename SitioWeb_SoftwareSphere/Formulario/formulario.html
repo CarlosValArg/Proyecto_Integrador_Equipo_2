@@ -13,31 +13,50 @@
 <body>
   
 <!-- Navbar-->
-    <div id="navbar"></div>
+    <div id="navbar" ></div>
+  <style>
+    .formularioContainer {
+    gap: 5px;
+    display: flex;
+    flex-wrap: row;
+  }
+  </style>
 
-
-    <!--Formulatio-->
-    <div class="container" style="padding: 50px; text-align: start; background-color:white; border-radius: 30px; color: black; margin: 60px 60px; width: 600px; justify-content: center;">
+    <!--Formulario-->
+  <div class="formularioContainer" >
+    <div class="container" style="padding: 50px; text-align: start; background-color:#A5D7E8; border-radius: 30px; 
+                                    color: black; margin: 30px 60px; width: 600px; justify-content: center;">
         <form class="needs-validation" novalidate>
           <div class="form-group col">
-              <label for="imgProducto">Selecciona una imagen para el producto</label>
-              <input type="text" class="form-control" id="imgProducto" readonly required>
-              <button type="button" class="btn btn-secondary mt-2" id="uploadButton">Subir Imagen</button>
+              <label for="imgProducto">Selecciona una imagen para el servicio</label>
+              <input type="text" class="form-control" style="padding: 10px; margin-top: 20px" id="imgProducto" readonly required>
+              <button type="button" class="btn btn-secondary mt-2" style="padding: 10px; margin:30px 70px" id="uploadButton">Subir Imagen</button>
               <div class="invalid-feedback">
                 Debes seleccionar una imagen.
               </div>
           </div>
-  
-        <div class="form-row">
+        </div>
+
+        <div class="container">
+            <img src="https://www.bbvaspark.com/contenido/wp-content/uploads/2022/07/HerramientasUX_04-1-scaled.jpg" 
+                style="padding: 7px; text-align: start; background-color:#A5D7E8; border-radius: 30px; color: black; 
+                        margin: 30px 60px; width: 50vw; justify-content: center;" alt="">
+        </div>
+  </div>  
+
+  <div class="camposContainer">
+        <div class="form-row" style="padding: 20px; text-align: start; background-color:#A5D7E8; border-radius: 30px; 
+                                      color: black; margin: 0px 60px; width: 89vw; justify-content: center;">
         <div class="col">
-            <label for="tituloProducto">Tí­tulo</label>
-            <input type="text" class="form-control" id="tituloProducto" placeholder="Tí­tulo del producto" required>
+            <label for="tituloProducto">Título</label>
+            <input type="text" class="form-control" id="tituloProducto" placeholder="Título del servicio" required>
             <div class="invalid-feedback">
                 Ingresa un título.
             </div>
         </div>
         </div> 
-        <div class="form-row">
+        <div class="form-row" style="padding: 20px; text-align: start; background-color:#A5D7E8; border-radius: 30px; 
+                                      color: black; margin: 30px 60px; width: 89vw; justify-content: center;">
           <div class="col">
             <label for="descripcionProducto">Descripción</label>
             <input type="text" class="form-control" id="descripcionProducto" placeholder="Breve descripción de app/servicio web" required>
@@ -46,9 +65,10 @@
             </div>
           </div>    
         </div>
-        <button class="btn btn-primary" id="btnAgregar" type="submit">Agregar</button>
+        <button class="btn btn-primary" style="padding: 10px; margin:30px 70px; " id="btnAgregar" type="submit">Agregar Servicio</button>
       </form>
     </div>
+  </div>  
 
     <!-- Footer -->
   <div id="footer1"></div>

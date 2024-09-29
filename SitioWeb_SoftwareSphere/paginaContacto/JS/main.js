@@ -22,12 +22,14 @@ if(isNaN(txtTelefono.value)){
 if(Number(txtTelefono.value)<=0){
     return false;
 }//<=0
-
+if (txtTelefono.value.charAt(0) === '0') {
+    return false; // El primer número no puede ser cero
+}
 return true;
 }//functionvalidarTelefono
 
 function validarCorreo() {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\.[a-zA-Z]{2,})$/;
+    const emailPattern = /^[a-zA-z0-9._%+-]+@[a-za-z0-9.-]+(\.[a-za-z]{2,})$/;
     return emailPattern.test(txtCorreo.value) && !/\.{2,}/.test(txtCorreo.value.split('@')[1]);
 }//validarCorreo
 
@@ -36,6 +38,7 @@ function validarCorreo() {
 
 btnEnviar.addEventListener("click", function(event) {
     event.preventDefault(); // Evita el envío del formulario
+   valid=true;
     txtNombre.style.border ="";
     txtApellido.style.border ="";
     txtTelefono.style.border="";
@@ -81,11 +84,7 @@ btnEnviar.addEventListener("click", function(event) {
         valid = false;
     }//Validación mensaje
 
-    // Swal.fire({
-    //     title: "Enviado!",
-    //     text: "Tu correo fue enviado!",
-    //     icon: "success"
-    // });
+
 
 // contador++;
 // localStorage.setItem("contador",contador);    
@@ -106,8 +105,8 @@ if (valid) {
         telefono: txtTelefono.value,
         correo: txtCorreo.value,
         mensaje: txtMensaje.value
-   
- };
+    };
+
     // Agregar el nuevo registro al arreglo
     registros.push(nuevoRegistro);
 
@@ -115,7 +114,12 @@ if (valid) {
     localStorage.setItem("registros", JSON.stringify(registros));
 
     // Mostrar mensaje de éxito
-    alert("Formulario enviado correctamente!");
+    // alert("Formulario enviado correctamente!");
+      Swal.fire({
+        title: "Enviado!",
+        text: "Tu correo fue enviado!",
+        icon: "success"
+     });
     
     // Limpiar los campos después de enviar
     txtNombre.value = "";
@@ -151,3 +155,4 @@ txtCorreo.addEventListener("blur",function(event){
 txtMensaje.addEventListener("blur", function(event) {
     txtMensaje.value = txtMensaje.value.trim();
 });
+

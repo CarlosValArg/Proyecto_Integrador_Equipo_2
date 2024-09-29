@@ -1,12 +1,16 @@
 const navbar = document.getElementById("navbar");
 const footer = document.getElementById("footer1");
 
-navbar.insertAdjacentHTML("afterbegin", `
+navbar.insertAdjacentHTML("afterbegin",` 
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
           <div class="navbar-brand">
-              <img src="../acercade/assets/gray.png" alt="logo" width="150px">
+          <button="disabled">
+        <a href="../Inicio/index.html">
+        <img src="./assets/gray.png" alt="logo" width="150px">
+        </a>
+        </button>
           </div> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -29,7 +33,7 @@ navbar.insertAdjacentHTML("afterbegin", `
               </ul>
               <div class="d-flex align-items-center">
                   <button class="btn-button1 me-2">Ingresar</button>                 
-                  <button class="btn-button2">Registrarse</button>
+                  <a href="../Registrar/Registrar.html"><button class="btn-button2">Registrarse</button></a>
               </div>
           </div>
       </div>
@@ -40,11 +44,6 @@ navbar.insertAdjacentHTML("afterbegin", `
 footer.insertAdjacentHTML("beforeend", `
   <!-- Footer -->
   <footer class="container-fluid text-center text-lg-start bg-blue text-muted" id="footer1">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <div class="me-5 d-none d-lg-block">
-        <span>Contáctanos en nuestras redes sociales:</span>
-      </div>
       <div>
         <a href="" class="me-4 text-reset">
           <i class="fab fa-facebook-f"></i>
@@ -79,9 +78,9 @@ footer.insertAdjacentHTML("beforeend", `
 
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold mb-4">Desarrollo de Apps</h6>
-            <p><a href="#!" class="text-reset">Apps IOS</a></p>
+            <p><a href="#!" class="text-reset">Apps iOS</a></p>
             <p><a href="#!" class="text-reset">Apps Android</a></p>
-            <p><a href="#!" class="text-reset">Apps Smart Wacht</a></p>
+            <p><a href="#!" class="text-reset">Apps Smart Watch</a></p>
           </div>
 
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -102,7 +101,7 @@ footer.insertAdjacentHTML("beforeend", `
     </section>
 
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-4" style="font-size: medium; background-color: rgba(0, 0, 0, 0.05);">
       © 2024 Copyright
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Software Sphere</a>
     </div>
