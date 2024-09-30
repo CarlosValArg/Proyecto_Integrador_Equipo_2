@@ -13,86 +13,105 @@
 <body>
   <div id="navbar"></div>
   <!-- Content -->
-    <div class="container-fluid my-5">
-        <div class="row">
-            <!-- Left Column: Contact Info and Location -->
-            <div class="col-12 col-md-6">
-                <h1>Contáctanos</h1>
-                <p>Si deseas consultar mayor información sobre nuestros servicios o tienes alguna duda al respecto, no dudes en solicitar una consultoría gratuita y uno de nuestros asesores te contactará a la brevedad.</p>
+  <div class="row">
+    <div style="padding: 30px;" class="col-12 col-md-6"> 
+      <h1>Contáctanos</h1>
+      <p>Si deseas consultar mayor información sobre nuestros servicios o tienes alguna duda al respecto, no dudes en solicitar una consultoría gratuita y uno de nuestros asesores te contactará a la brevedad.</p>
+    
+      <!-- Icons Section -->
 
-                <!-- Icons Section -->
-                 
-                <div class="mt-4">
-                    <p><i class="bi bi-telephone-fill"></i> Teléfono: 55-1234-5678</p>
-                    <p><i class="bi bi-envelope-at-fill"></i> Correo: email@dominio.com</p>
-                    <p><i class="bi bi-geo-alt-fill"></i> Dirección: C. Dr. José María Vértiz 680, Ciudad de México</p>
+      <div class="mt-4">
+          <p><i class="bi bi-telephone-fill"></i> Teléfono: 55-1234-5678</p>
+          <p><i class="bi bi-envelope-at-fill"></i> Correo: email@dominio.com</p>
+          <p><i class="bi bi-geo-alt-fill"></i> Dirección: C. Dr. José María Vértiz 680, Ciudad de México</p>
+      </div>
+      
+      <h2 class="mt-5">Ubicación</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.3751266087056!2d-99.15332242495184!3d19.396191381875465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff035bbdee85%3A0xc3e6420fd420eb1a!2sC.%20Dr.%20Jos%C3%A9%20Mar%C3%ADa%20V%C3%A9rtiz%20680%2C%20Narvarte%20Oriente%2C%20Benito%20Ju%C3%A1rez%2C%2003023%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1725687456742!5m2!1ses-419!2smx" width="100%" height="300" style="border-radius:10px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    
+    
+    
+    <div style="padding-top: 30px;" class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <div id="FormularioResponsive" style="background-color: #A5D7E8;">
+        <h2 class="text-center" style="margin-top: 50px;">Formulario</h2>
+        <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <p id="alertValidacionesTexto"></p>
+        </div>
+        <div class="container" style="padding: 30px; text-align: start; background-color:#A5D7E8; border-radius: 30px; color: black; margin: 10px 0px;">
+     
+            <form id="form" action="https://formspree.io/f/mnnaevpy" method="POST">  
+                <script>
+                document.addEventListener('DOMContentLoaded', () => {  
+                    const $form = document.querySelector('form');
+                    
+                    $form.addEventListener('submit', handleSubmit);
+                    
+                    async function handleSubmit(event) {
+                        event.preventDefault();
+                        const form = new FormData($form); 
+                        const response = await fetch($form.action, {
+                            method: $form.method,
+                            body: form,
+                            headers: {
+                                'Accept': 'application/json' 
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            $form.reset(); 
+                            alert('Gracias por contactarme, te escribiré pronto');  
+                        } else {
+                            const errorData = await response.json();
+                            alert('Hubo un problema al enviar el formulario: ' + errorData.errors[0].message); 
+                        }
+                    }
+                });
+                </script>
+                
+                <div class="mb-4">
+                    <label for="name" class="form-label">Nombre(s)</label>
+                    <input type="text" name="name" class="form-control" id="txtNombre" placeholder="Nombre(s)" required>
                 </div>
                 
-                <h2 class="mt-5">Ubicación</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.3751266087056!2d-99.15332242495184!3d19.396191381875465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff035bbdee85%3A0xc3e6420fd420eb1a!2sC.%20Dr.%20Jos%C3%A9%20Mar%C3%ADa%20V%C3%A9rtiz%20680%2C%20Narvarte%20Oriente%2C%20Benito%20Ju%C3%A1rez%2C%2003023%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1725687456742!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <!-- Right Column: Form -->
-
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                <div id="FormularioResponsive" style="background-color: #A5D7E8;">
-                    <h2 class="text-center" style="margin-top: 50px;">Formulario</h2>
-                    <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-                        <p id="alertValidacionesTexto"></p>
-                    </div>
-                <div class="container" style="padding: 30px; text-align: start; background-color:#A5D7E8; border-radius: 30px; color: black; margin: 10px 0px;">
-                  <!-- modify this form HTML and place wherever you want your form -->
-                  <form
-                  action="https://formspree.io/f/mqazjvoe"
-                  method="POST"
-                  >                    
-                        <div class="mb-4">
-                            <label for="nombre" class="form-label">Nombre(s)</label>
-                            <input type="text" class="form-control" id="nombre" autofocus name="nombre" placeholder="Nombre(s)">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="apellido" class="form-label">Apellido(s)</label>
-                            <input type="text" class="form-control" id="apellido"  name="apellido" placeholder="Apellido(s)">
-                        </div>
-                        
-                        <div class="mb-4"> 
-                            <label for="telefono" class="form-label">Número telefónico</label>
-                            <input type="text" class="form-control" id="telefono"  name="numero" placeholder="55-1234-4567">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="correo" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="correo" name="email" placeholder="email@dominio.com">
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea type="text" class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Deja tu mensaje"></textarea>
-                        </div>
-                        
-                        <div class="col-12">
-                            <button class="btn btn-primary" id="btnEnviar" 
-                            style="display: block; margin: 20px auto;" type="submit">Enviar</button>
-                        </div>
-                    </form>
+                <div class="mb-4">
+                    <label for="apellido" class="form-label">Apellido(s)</label>
+                    <input type="text" name="apellido" class="form-control" id="txtApellido" placeholder="Apellido(s)" required>
                 </div>
-            </div>
-        </div>
+                
+                <div class="mb-4"> 
+                    <label for="telefono" class="form-label">Número telefónico</label>
+                    <input type="text" name="numero" class="form-control" id="txtTelefono" placeholder="5512344567" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="correo" class="form-label">Correo Electrónico</label>
+                    <input type="email" name="email" class="form-control" id="txtCorreo" placeholder="correo@dominio.com" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea name="mensaje" class="form-control" id="txtMensaje" rows="3" placeholder="Deja tu mensaje" required></textarea>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" id="btnEnviar" style="display: block; margin: 20px auto;" type="submit">Enviar</button>
+                </div>
+            </form>
     </div>
-
-
-
+    </div>
+    </div>
+ 
 <!-- Footer -->
 <div id="footer1"></div>
-
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>              
     <script src="../Contenedores.js/navbar-footer.js" defer></script>
     <script src="./JS/main.js" defer></script>
+    
+
     
 </body>
 </html>
