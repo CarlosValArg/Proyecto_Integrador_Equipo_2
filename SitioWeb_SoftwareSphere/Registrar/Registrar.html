@@ -15,61 +15,71 @@
 <body>
     <div id="navbar"></div>
 
-  <div class="row">
-    <form style="padding: 30px;" class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="form-group col-md-4">
-          <label class="form-label" for="form3Example4">Nombre Completo</label>
-          <input type="text" class="form-control" id="txtNombre" placeholder="Introduzca su nombre completo" required>
-          <div class="invalid-feedback">
-            Nombre inválido
+<!-- <div class="container-fluid">   -->
+  <div class="container">
+    <div class="row">
+      <!-- Columna para el formulario -->
+      <div class="col-md-6">
+        <form style="padding: 30px;" class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="form-label" for="form3Example4">Nombre Completo</label>
+              <input type="text" class="form-control" id="txtNombre" placeholder="Introduzca su nombre completo" required>
+              <div class="invalid-feedback">
+                Nombre inválido
+              </div>
+            </div>
           </div>
-      </div>
-    </div>
-    <div class="form-row">
-    <div class="col-md-4 mb-3">
-        <label class="form-label" for="form3Example4">Número de teléfono</label>
-        <img id="logoS" src="../acercade/assets/logo_softwaresphere.png" alt=""> 
-        <input type="text" class="form-control" id="txtNumero" placeholder="Introduzca su número" required>
-        <div class="invalid-feedback">
-            Teléfono inválido
-        </div>
-       
-    </div>
-    </div> 
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="form3Example4">Correo Electrónico</label>
-        <input type="text" class="form-control" id="txtCorreo" placeholder="Coloque su correo" required>
-        <div class="invalid-feedback">
-          Correo inválido
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label class="form-label" for="form3Example4">Contraseña</label>
-            <input type="password" class="form-control" id="txtContraseña" placeholder="" required>
-            <small class="form-text" style="color: rgb(255, 251, 251); font-size: medium;">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="form-label" for="form3Example4">Número de teléfono</label>
+              <input type="text" class="form-control" id="txtNumero" placeholder="Introduzca su número" required>
+              <div class="invalid-feedback">
+                Teléfono inválido
+              </div>
+            </div>
+          </div> 
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="form-label" for="form3Example4">Correo Electrónico</label>
+              <input type="text" class="form-control" id="txtCorreo" placeholder="Coloque su correo" required>
+              <div class="invalid-feedback">
+                Correo inválido
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="form-label" for="form3Example4">Contraseña</label>
+              <input type="password" class="form-control" id="txtContraseña" placeholder="" required>
+              <small class="form-text" style="color: rgb(255, 251, 251); font-size: medium;">
                 La contraseña debe tener al menos 8 caracteres, incluir una letra mayúscula, un número y un carácter especial @$!%*?&.
               </small>
-            <div class="invalid-feedback">
+              <div class="invalid-feedback">
                 Contraseña Incorrecta
+              </div>
             </div>
-        </div>
-        </div> 
-        <div class="form-row">
-            <div class="col-md-4 mb-3">
-                <label class="form-label" for="form3Example4">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="txtConfirmacion" placeholder="" required>
-                <div class="invalid-feedback">
-                    La contraseña no coincide
-                </div>
+          </div> 
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label class="form-label" for="form3Example4">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="txtConfirmacion" placeholder="" required>
+              <div class="invalid-feedback">
+                La contraseña no coincide
+              </div>
             </div>
-            </div>
-            <button class="btn btn-primary" id="btn-regs" type="submit">Registrarse</button>
-          </form>
-         
-</div>
+          </div>
+          <button class="btn-primary" id="btn-regs" type="submit">Registrarse</button>
+        </form>
+      </div>
+  
+      <!-- Columna para la imagen -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <img id="logoS" src="../acercade/assets/logo_softwaresphere.png" class="img-fluid" alt="Logo">
+      </div>
+    </div>
+  </div> 
+<!-- </div> -->
     
     <div id="footer1"></div>
 

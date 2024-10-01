@@ -1,0 +1,10 @@
+#inicio{
+    background-color: #A5D7E8;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center; 
+    width: 600px; 
+    height: 400px; 
+    padding: 20px; 
+    margin-top: 40px;
+}
