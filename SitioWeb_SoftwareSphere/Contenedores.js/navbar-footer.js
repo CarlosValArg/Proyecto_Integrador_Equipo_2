@@ -32,7 +32,7 @@ navbar.insertAdjacentHTML("afterbegin",`
                   </li>
               </ul>
               <div class="d-flex align-items-center">
-                  <button class="btn-button1 me-2">Ingresar</button>                 
+              <a href="../logIn/logIn.html"><button class="btn-button1 me-2">Ingresar</button></a>                
                   <a href="../Registrar/Registrar.html"><button class="btn-button2">Registrarse</button></a>
               </div>
           </div>
@@ -68,37 +68,41 @@ footer.insertAdjacentHTML("beforeend", `
 
     <!-- Section: Links  -->
     <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <div class="row mt-3">
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3">Software Sphere</i>
-            </h6>
-          </div>
-
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">Desarrollo de Apps</h6>
-            <p><a href="#!" class="text-reset">Apps iOS</a></p>
-            <p><a href="#!" class="text-reset">Apps Android</a></p>
-            <p><a href="#!" class="text-reset">Apps Smart Watch</a></p>
-          </div>
-
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">Empresa</h6>
-            <p><a href="#!" class="text-reset">Acerca de nosotros</a></p>
-            <p><a href="#!" class="text-reset">Misión y visión</a></p>
-            <p><a href="#!" class="text-reset">Contáctanos</a></p>
-          </div>
-
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h6 class="text-uppercase fw-bold mb-4">Comunidad</h6>
-            <p><a href="#!" class="text-reset">Centro de ayuda</a></p>
-            <p><a href="#!" class="text-reset">Contrata a un experto</a></p>
-            <p><a href="#!" class="text-reset">Plataforma de desarrollo</a></p>
-          </div>
-        </div>
+  <div class="container text-center text-md-start mt-5">
+    <div class="row mt-3">
+      <!-- Columna Software Sphere -->
+      <div class="col-md-6 col-lg-4 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          <i class="fas fa-gem me-3">Software Sphere</i>
+        </h6>
       </div>
-    </section>
+
+      <!-- Columna Desarrollo de Apps -->
+      <div class="col-md-6 col-lg-3 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Desarrollo de Apps</h6>
+        <p><a href="#!" class="text-reset">Apps iOS</a></p>
+        <p><a href="#!" class="text-reset">Apps Android</a></p>
+        <p><a href="#!" class="text-reset">Apps Smart Watch</a></p>
+      </div>
+
+      <!-- Columna Empresa -->
+      <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Empresa</h6>
+        <p><a href="#!" class="text-reset">Acerca de nosotros</a></p>
+        <p><a href="#!" class="text-reset">Misión y visión</a></p>
+        <p><a href="#!" class="text-reset">Contáctanos</a></p>
+      </div>
+
+      <!-- Columna Comunidad -->
+      <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Comunidad</h6>
+        <p><a href="#!" class="text-reset">Centro de ayuda</a></p>
+        <p><a href="#!" class="text-reset">Contrata a un experto</a></p>
+        <p><a href="#!" class="text-reset">Plataforma de desarrollo</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Copyright -->
     <div class="text-center p-4" style="font-size: medium; background-color: rgba(0, 0, 0, 0.05);">
