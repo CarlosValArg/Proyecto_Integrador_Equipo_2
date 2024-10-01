@@ -48,8 +48,8 @@ form.addEventListener('submit', function(event) {
     let isValid = true;
 
     // Verificar todos los campos
-    [campoTitulo, campoDesc, campoPrecio, campoImg].forEach(field => {
-        if (field.value.trim() === "" || (field === campoPrecio && campoPrecio.value <= 0)) {
+    [campoTitulo, campoDesc, campoImg].forEach(field => {
+        if (field.value.trim() === "" || (field === campoTitulo && campoTitulo.value <= 0)) {
             field.classList.add('is-invalid');
             isValid = false;
         } else {
@@ -68,7 +68,6 @@ form.addEventListener('submit', function(event) {
             imgProducto: campoImg.value, // URL de la imagen en Cloudinary
             tituloProducto: campoTitulo.value,
             descripcionProducto: campoDesc.value,
-            precioProducto: parseFloat(campoPrecio.value).toFixed(2) // Asegurarse de que el precio tenga 2 decimales
         };
 
         // Guardar la información en localStorage (opcional)
