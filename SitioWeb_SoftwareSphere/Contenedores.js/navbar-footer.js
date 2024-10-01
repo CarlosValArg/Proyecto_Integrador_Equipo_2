@@ -106,7 +106,8 @@ footer.insertAdjacentHTML("beforeend", `
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Software Sphere</a>
     </div>
   </footer>
-`);
+
+  `);
 
 
     
