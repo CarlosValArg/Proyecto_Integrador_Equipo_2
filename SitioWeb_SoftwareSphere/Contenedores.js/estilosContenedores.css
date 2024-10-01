@@ -32,7 +32,8 @@
 .nav-link {
     color: white;
     font-size: 24px;
-    margin-right: 20px; /* Espacio entre los enlaces */
+    margin-right: 20px;
+    /* Espacio entre los enlaces */
 }
 
 .navbar-brand {
@@ -41,7 +42,7 @@
 
 .body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .navbar-toggler {
@@ -52,31 +53,43 @@
 @media (max-width: 991px) {
     .navbar {
         display: flex;
-        flex-direction: column; /* Cambiar a columna */
-        align-items: center; /* Centrar elementos */
+        flex-direction: column;
+        /* Cambiar a columna */
+        align-items: center;
+        /* Centrar elementos */
     }
 
     .navbar-collapse {
-        width: 100%; /* Asegúrate de que el menú ocupe todo el ancho */
+        width: 100%;
+        /* Asegúrate de que el menú ocupe todo el ancho */
     }
 
     .d-flex {
-        width: 100%; /* Asegúrate de que el contenedor de botones ocupe todo el ancho */
-        justify-content: center; /* Centra los botones */
-        margin-top: 10px; /* Espacio entre el menú y los botones */
+        width: 100%;
+        /* Asegúrate de que el contenedor de botones ocupe todo el ancho */
+        justify-content: center;
+        /* Centra los botones */
+        margin-top: 10px;
+        /* Espacio entre el menú y los botones */
     }
 
     .btn-button1,
     .btn-button2 {
-        width: 150px; /* Ancho uniforme para los botones */
-        margin: 0 10px; /* Espacio entre botones */
+        width: 150px;
+        /* Ancho uniforme para los botones */
+        margin: 0 10px;
+        /* Espacio entre botones */
     }
 }
 
 /* Footer */
 
 #footer1 .btn {
-    font-size: 1.5rem; /* Cambia el tamaño del icono */
-    padding: 0.5rem; /* Ajusta el tamaño del botón */
+    font-size: 1.5rem;
+    /* Cambia el tamaño del icono */
+    padding: 0.5rem;
+    /* Ajusta el tamaño del botón */
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
 }
-
