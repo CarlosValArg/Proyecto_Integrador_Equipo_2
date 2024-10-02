@@ -1,5 +1,14 @@
 #inicio {
     background-color: #A5D7E8;
+ 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin-top: 40px;
+
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -35,4 +44,5 @@ button#btn-regs {
 
 body{
     background-image: url(../Registrar/assets/output-onlinepngtools.png);
+ 2b0fabba3e2254b7bba4c42312381b799a0a2af3
 }

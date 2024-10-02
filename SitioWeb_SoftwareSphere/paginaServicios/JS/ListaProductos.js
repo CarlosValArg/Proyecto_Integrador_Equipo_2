@@ -9,9 +9,16 @@ function addItem(item) {
                 </div>
                 <div class="text-center" style="padding: 10px;">
 
+
                    <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
 
                     <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
+
+
+                    <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
+
+                   <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
+
 
                 </div>
             </div>
