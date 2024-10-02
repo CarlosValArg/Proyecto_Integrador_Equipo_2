@@ -84,17 +84,10 @@ btnEnviar.addEventListener("click", function(event) {
         valid = false;
     }//Validación mensaje
 
-
-
-// contador++;
-// localStorage.setItem("contador",contador);    
-// localStorage.setItem("nombre", txtNombre.value);
-// localStorage.setItem("apellido", txtApellido.value);
-// localStorage.setItem("telefono", txtTelefono.value);
-// localStorage.setItem("correo", txtCorreo.value);
-// localStorage.setItem("mensaje", txtMensaje.value);
-
 if (valid) {
+
+    // Enviar el formulario a Formspree
+    //document.querySelector("form").submit();
     // Obtener datos existentes de localStorage
     let registros = JSON.parse(localStorage.getItem("registros")) || [];
 
