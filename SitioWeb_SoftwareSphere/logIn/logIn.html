@@ -15,32 +15,34 @@
 <body>
     <div id="navbar"></div>
 
-<div class="container-fluid" id="inicio">
-<form id="loginForm">
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="form3Example4">Correo Electrónico</label>
-        <input type="text" class="form-control" id="txtCorreo" placeholder="Coloque su correo" required>
-        <div class="invalid-feedback">
-          Ingresa tu correo electrónico
-        </div>
-      </div>
-    </div>
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label class="form-label" for="form3Example4">Contraseña</label>
-            <input type="password" class="form-control" id="txtContraseña" placeholder="Coloca tu contraseña" required>
-            <div class="invalid-feedback">
-                Ingresa tu contraseña
+    <div class="container-fluid" id="inicio">
+        <form id="loginForm">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label" for="form3Example4">Correo Electrónico</label>
+                    <input type="text" class="form-control" id="txtCorreo" placeholder="Coloque su correo" required>
+                    <div class="invalid-feedback">
+                        Ingresa tu correo electrónico
+                    </div>
+                </div>
             </div>
-        </div>
-    </div> 
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label" for="form3Example4">Contraseña</label>
+                    <input type="password" class="form-control" id="txtContraseña" placeholder="Coloca tu contraseña"
+                        required>
+                    <div class="invalid-feedback">
+                        Ingresa tu contraseña
+                    </div>
+                </div>
+            </div>
             <button class="btn btn-primary" id="btn-regs" type="submit">Iniciar sesión</button>
-            <div id="mensajeError" class="text-danger mt-2" style="display: none;">Nombre de usuario o contraseña inválidos.</div>
-</form>
-</div>
-         
-    
+            <div id="mensajeError" class="text-danger mt-2" style="display: none;">Nombre de usuario o contraseña
+                inválidos.</div>
+        </form>
+    </div>
+
+
     <div id="footer1"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
@@ -48,4 +50,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./logIn.js" defer></script>
 </body>
+
 </html>
