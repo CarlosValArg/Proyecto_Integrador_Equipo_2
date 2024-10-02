@@ -87,7 +87,7 @@ btnEnviar.addEventListener("click", function(event) {
 if (valid) {
 
     // Enviar el formulario a Formspree
-    //document.querySelector("form").submit();
+    document.querySelector("form").submit();
     // Obtener datos existentes de localStorage
     let registros = JSON.parse(localStorage.getItem("registros")) || [];
 
