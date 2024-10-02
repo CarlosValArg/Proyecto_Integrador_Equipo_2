@@ -1,7 +1,7 @@
 const navbar = document.getElementById("navbar");
 const footer = document.getElementById("footer1");
 
-navbar.insertAdjacentHTML("afterbegin", ` 
+navbar.insertAdjacentHTML("afterbegin",` 
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -114,3 +114,4 @@ footer.insertAdjacentHTML("beforeend", `
   `);
 
 
+    
