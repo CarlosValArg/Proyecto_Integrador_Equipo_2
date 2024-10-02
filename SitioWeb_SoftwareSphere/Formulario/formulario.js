@@ -4,13 +4,14 @@ const campoDesc = document.getElementById("descripcionProducto");
 const campoPrecio = document.getElementById("precioProducto");
 const form = document.querySelector('.needs-validation');
 
-// Función para mostrar alertas de Bootstrap
-function mostrarAlerta(mensaje) {
-    const alerta = document.createElement('div');
-    alerta.className = 'alert alert-danger alert-dismissible fade show';
-    alerta.role = 'alert';
-    alerta.innerHTML = `${mensaje} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
-    document.body.insertBefore(alerta, form);
+// Función para mostrar alertas de SweetAlert2
+function mostrarAlerta(mensaje, tipo) {
+    Swal.fire({
+        title: tipo === 'success' ? '¡Éxito!' : 'Error',
+        text: mensaje,
+        icon: tipo,
+        confirmButtonText: 'Aceptar'
+    });
 }
 
 // Validación en tiempo real para el campo Tí­tulo
@@ -19,7 +20,7 @@ campoTitulo.addEventListener('input', function() {
     campoTitulo.classList.toggle('is-valid', campoTitulo.value.trim() !== "");
 });
 
-// ValidaciÃ³n en tiempo real para el campo Descripción
+// Validacion en tiempo real para el campo Descripción
 campoDesc.addEventListener('input', function() {
     campoDesc.classList.toggle('is-invalid', campoDesc.value.trim() === "");
     campoDesc.classList.toggle('is-valid', campoDesc.value.trim() !== "");
@@ -48,8 +49,8 @@ form.addEventListener('submit', function(event) {
     let isValid = true;
 
     // Verificar todos los campos
-    [campoTitulo, campoDesc, campoPrecio, campoImg].forEach(field => {
-        if (field.value.trim() === "" || (field === campoPrecio && campoPrecio.value <= 0)) {
+    [campoTitulo, campoDesc, campoImg].forEach(field => {
+        if (field.value.trim() === "") {
             field.classList.add('is-invalid');
             isValid = false;
         } else {
@@ -61,20 +62,23 @@ form.addEventListener('submit', function(event) {
     if (!isValid) {
         event.preventDefault(); // Evitar el enví­o si hay campos inválidos
         event.stopPropagation();
-        mostrarAlerta("Por favor, completa todos los campos correctamente.");
+        mostrarAlerta("Por favor, completa todos los campos correctamente.", 'error');
     } else {
+        event.preventDefault(); // Prevenir envío para mostrar la alerta de éxito
         // Crear el modelo de datos en formato JSON
         const productoInfo = {
             imgProducto: campoImg.value, // URL de la imagen en Cloudinary
             tituloProducto: campoTitulo.value,
             descripcionProducto: campoDesc.value,
-            precioProducto: parseFloat(campoPrecio.value).toFixed(2) // Asegurarse de que el precio tenga 2 decimales
         };
 
         // Guardar la información en localStorage (opcional)
         const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
         existingProducts.push(productoInfo);
         localStorage.setItem('productos', JSON.stringify(existingProducts));
+
+        // Mostrar alerta de éxito
+        mostrarAlerta("El servicio se ha agregado correctamente.", 'success');
 
         // Opcional: Limpiar el formulario después de agregar
         form.reset();
