@@ -15,30 +15,26 @@
 <body>
     <div id="navbar"></div>
 
-<div class="container-fluid" id="inicio">
-<form id="loginForm">
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label class="form-label" for="form3Example4">Correo Electrónico</label>
-        <input type="text" class="form-control" id="txtCorreo" placeholder="Coloque su correo" required>
-        <div class="invalid-feedback">
-          Ingresa tu correo electrónico
-        </div>
-      </div>
-    </div>
-    <div class="form-row">
-        <div class="col-md-4 mb-3">
-            <label class="form-label" for="form3Example4">Contraseña</label>
-            <input type="password" class="form-control" id="txtContraseña" placeholder="Coloca tu contraseña" required>
-            <div class="invalid-feedback">
-                Ingresa tu contraseña
+    <div class="container" id="inicio">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="txtCorreo">Correo Electrónico</label>
+                <input type="email" class="form-control" id="txtCorreo" placeholder="Ingresa tu correo" required>
+                <div class="invalid-feedback">
+                    Ingresa tu correo electrónico
+                </div>
             </div>
-        </div>
-    </div> 
+            <div class="form-group">
+                <label for="txtContraseña">Contraseña</label>
+                <input type="password" class="form-control" id="txtContraseña" placeholder="Ingresa tu contraseña" required>
+                <div class="invalid-feedback">
+                    Ingresa tu contraseña
+                </div>
+            </div>
             <button class="btn btn-primary" id="btn-regs" type="submit">Iniciar sesión</button>
             <div id="mensajeError" class="text-danger mt-2" style="display: none;">Nombre de usuario o contraseña inválidos.</div>
-</form>
-</div>
+        </form>
+    </div>
          
     
     <div id="footer1"></div>
