@@ -1,48 +1,30 @@
+body {
+    background-image: url(./Assets/foco-vector.jpg);
+    color: white;
+}
+
 #inicio {
-    background-color: #A5D7E8;
+    background: transparent;
+    backdrop-filter: blur(20px);
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     max-width: 400px;
-    padding: 40px;
-    margin: auto; 
-    margin-top: 10vh; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    width: 100%;
-}
-
-.form-row {
-    margin-bottom: 15px;
+    margin: auto;
 }
 
 .form-control {
     font-size: 16px;
-    padding: 10px;
 }
 
-#btn-regs {
-    width: 100%;
+button#btn-regs {
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
 }
 
-body{
-    background-image: url(../Registrar/assets/output-onlinepngtools.png);
-}
-
-.bi-person-circle {
-    font-size: 1.8rem;
+.position-relative svg {
     color: white;
-    cursor: pointer;
-}
-
-.dropdown-toggle::after {
-    display: none; /* Ocultar el caret predeterminado de Bootstrap */
+    right: 20px;
+    top: 35%;
 }

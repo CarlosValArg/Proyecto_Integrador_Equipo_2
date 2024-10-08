@@ -5,19 +5,19 @@ const txtContraseña = document.getElementById("txtContraseña");
 const txtConfirmacion = document.getElementById("txtConfirmacion");
 const form = document.querySelector('.needs-validation');
 
-// Función para mostrar alertas de SweetAlert2
-function mostrarAlerta(mensaje, tipo) {
-    Swal.fire({
-        title: tipo === 'success' ? '¡Éxito!' : 'Error',
-        text: mensaje,
-        icon: tipo,
-        confirmButtonText: 'Aceptar'
-    });
+// Función para mostrar alertas de Bootstrap
+function mostrarAlerta(mensaje) {
+    const alerta = document.createElement('div');
+    alerta.className = 'alert alert-danger alert-dismissible fade show';
+    alerta.role = 'alert';
+    alerta.innerHTML = `${mensaje} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
+    document.body.insertBefore(alerta, form);
 }
+
 
 // Validación en tiempo real para el Nombre
 txtNombre.addEventListener('input', function() {
-    const nombreRegex = /^([a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]{2,60}[\,\-\.]{0,1}[\s]{0,1}){1,3}$/;
+    const nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+(?:\s+[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+){1,5}(?:\s+[-\sa-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+)?$/;
     const isValid = nombreRegex.test(txtNombre.value);
     txtNombre.classList.toggle('is-invalid', !isValid);
     txtNombre.classList.toggle('is-valid', isValid);
@@ -80,9 +80,8 @@ form.addEventListener('submit', function(event) {
     if (!isValid) {
         event.preventDefault(); // Evitar el envío si hay campos inválidos
         event.stopPropagation();
-        mostrarAlerta('Por favor, completa todos los campos correctamente.', 'error');
+        mostrarAlerta("Por favor, completa todos los campos correctamente.");
     } else {
-        event.preventDefault(); // Evitar el envío inmediato del formulario
         // Crear el objeto de usuario en formato JSON
         const userInfo = {
             txtNombre: txtNombre.value,
@@ -91,25 +90,17 @@ form.addEventListener('submit', function(event) {
             txtContraseña: txtContraseña.value
         };
 
-        // Mostrar alerta y esperar la interacción del usuario
-        Swal.fire({
-            title: '¡Éxito!',
-            text: 'Registro exitoso',
-            icon: 'success',
-            confirmButtonText: 'Aceptar'
-        }).then(() => {
-            // Guardar la información en localStorage después de que el usuario presiona "Aceptar"
-            localStorage.setItem('user', JSON.stringify(userInfo));
+        // Guardar la información en localStorage
+        localStorage.setItem('user', JSON.stringify(userInfo));
 
-            // Limpiar el formulario después de registrar
-            form.reset();
-            
-            // Eliminar las clases de validación después de resetear el formulario
-            [txtNombre, txtNumero, txtCorreo, txtContraseña, txtConfirmacion].forEach(field => {
-                field.classList.remove('is-valid', 'is-invalid');
-            });
-            // También eliminar la clase 'was-validated' del formulario
-            form.classList.remove('was-validated');
+        // Opcional: Limpiar el formulario después de registrar
+        form.reset();
+        [txtNombre, txtNumero, txtCorreo, txtContraseña, txtConfirmacion].forEach(field => {
+            field.classList.remove('is-valid', 'is-invalid');
         });
+
+        alert('Registro exitoso!');
     }
+
+    form.classList.add('was-validated');
 });

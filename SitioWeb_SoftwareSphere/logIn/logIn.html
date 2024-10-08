@@ -10,34 +10,39 @@
     <link rel="stylesheet" href="../acercade/styles.css">
     <link rel="stylesheet" href="../paginaContacto/CSS/style.css">
     <link rel="stylesheet" href="../Contenedores.js/estilosContenedores.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div id="navbar"></div>
 
-    <div class="container" id="inicio">
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="txtCorreo">Correo Electrónico</label>
+    <div class="container mt-5" id="inicio">
+        <h2 class="text-center mb-4">Iniciar Sesión</h2>
+        <form id="loginForm" class="needs-validation" novalidate>
+            <div class="mb-3 position-relative">
+                <label for="txtCorreo" class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control" id="txtCorreo" placeholder="Ingresa tu correo" required>
-                <div class="invalid-feedback">
-                    Ingresa tu correo electrónico
-                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle position-absolute" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+                <div class="invalid-feedback">Ingresa tu correo electrónico.</div>
             </div>
-            <div class="form-group">
-                <label for="txtContraseña">Contraseña</label>
+            <div class="mb-3 position-relative">
+                <label for="txtContraseña" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="txtContraseña" placeholder="Ingresa tu contraseña" required>
-                <div class="invalid-feedback">
-                    Ingresa tu contraseña
-                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill position-absolute" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+                </svg>
+                <div class="invalid-feedback">Ingresa tu contraseña.</div>
             </div>
-            <button class="btn btn-primary" id="btn-regs" type="submit">Iniciar sesión</button>
+            <button class="btn btn-primary w-100" id="btn-regs" type="submit">Iniciar Sesión</button>
             <div id="mensajeError" class="text-danger mt-2" style="display: none;">Nombre de usuario o contraseña inválidos.</div>
+            <div class="text-center mt-3">
+                <p>¿No tienes una cuenta? <a href="../Registrar/Registrar.html" class="text-white">Regístrate</a></p>
+            </div>
         </form>
     </div>
-         
-    
+
     <div id="footer1"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
