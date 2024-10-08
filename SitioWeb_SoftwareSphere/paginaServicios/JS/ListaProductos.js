@@ -8,22 +8,7 @@ function addItem(item) {
                     <p class="card-text" style="font-size: 18px; margin: 0; text-align: left;">${item.description}</p>
                 </div>
                 <div class="text-center" style="padding: 10px;">
-<<<<<<< HEAD
-
-
-                   <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
-
                     <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
-
-
-                    <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
-
-                   <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
-
-
-=======
-                    <a href="#"  class="btn btn-primary" style="background-color: #576cbc; border-color: #576cbc; padding: 5px 10px; font-size: 14px; width: 70px; height: 30px; display: flex; justify-content: center; align-items: center;">Cotizar</a>
->>>>>>> 95e031ac19f8b00e808032dc596ca864435e772e
                 </div>
             </div>
         </div>
