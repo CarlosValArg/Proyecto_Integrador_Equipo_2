@@ -65,12 +65,27 @@ form.addEventListener('submit', function(event) {
         mostrarAlerta("Por favor, completa todos los campos correctamente.", 'error');
     } else {
         event.preventDefault(); // Prevenir envío para mostrar la alerta de éxito
+
+         // Obtener los productos existentes del localStorage
+         const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
+
+         // Verificar si ya existe un producto con el mismo título
+         const isDuplicated = existingProducts.some(product => product.tituloProducto === campoTitulo.value.trim());
+ 
+         if (isDuplicated) {
+             mostrarAlerta("El producto ya existe. No puedes agregar duplicados.", 'error');
+         } else {
+
         // Crear el modelo de datos en formato JSON
         const productoInfo = {
             imgProducto: campoImg.value, // URL de la imagen en Cloudinary
             tituloProducto: campoTitulo.value,
             descripcionProducto: campoDesc.value,
         };
+
+        // Guardar la información en localStorage
+        existingProducts.push(productoInfo);
+        localStorage.setItem('productos', JSON.stringify(existingProducts));
 
         // Guardar la información en localStorage (opcional)
         const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
