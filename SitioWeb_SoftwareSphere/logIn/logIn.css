@@ -26,7 +26,7 @@ form {
     padding: 10px;
 }
 
-button#btn-regs {
+#btn-regs {
     width: 100%;
     padding: 10px;
     font-size: 18px;
@@ -35,4 +35,14 @@ button#btn-regs {
 
 body{
     background-image: url(../Registrar/assets/output-onlinepngtools.png);
+}
+
+.bi-person-circle {
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display: none; /* Ocultar el caret predeterminado de Bootstrap */
 }
