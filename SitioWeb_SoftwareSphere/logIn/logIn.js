@@ -49,15 +49,13 @@ if(usuarioRegistrado){
         // Almacenar estado de sesión en localStorage
         localStorage.setItem('sesionIniciada', true);
         // Redirigir a la página de inicio después de que el usuario haga clic en "OK" 
-        window.location.href= '../Inicio/index.html'; 
+        window.location.href= '../index.html'; 
         }
     });
 }else{
     mostrarAlerta('Nombre de usuario o contraseña inválidos.', 'error');
-    //mensajeError.style.display='block';
 }}else{
     //mensajeError.textContent='No se encontró el usuario. Por favor, regístrate primero';
-    //mensajeError.style.display='block';
     mostrarAlerta('No se encontró el usuario. Por favor, regístrate primero.', 'warning');
 
 }

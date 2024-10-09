@@ -8,8 +8,8 @@ function actualizarNavbar() {
       <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
               <div class="navbar-brand">
-                  <a href="../Inicio/index.html">
-                      <img src="./assets/gray.png" alt="logo" width="150px">
+                  <a href="../index.html">
+                      <img src="../acercade/assets/gray.png" alt="logo" width="150px">
                   </a>
               </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@ function actualizarNavbar() {
             icon: 'info',
             confirmButtonText: 'Aceptar'
         }).then(() => {
-            window.location.href = '../Inicio/index.html'; // Redirigir a la página de inicio
+            window.location.href = '../index.html'; // Redirigir a la página de inicio
           });
       });
   }

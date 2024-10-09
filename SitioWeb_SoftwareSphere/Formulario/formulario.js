@@ -66,16 +66,15 @@ form.addEventListener('submit', function(event) {
     } else {
         event.preventDefault(); // Prevenir envío para mostrar la alerta de éxito
 
-         // Obtener los productos existentes del localStorage
-         const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
+        // Obtener los productos existentes del localStorage
+        const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
 
-         // Verificar si ya existe un producto con el mismo título
-         const isDuplicated = existingProducts.some(product => product.tituloProducto === campoTitulo.value.trim());
- 
-         if (isDuplicated) {
-             mostrarAlerta("El producto ya existe. No puedes agregar duplicados.", 'error');
-         } else {
+        // Verificar si ya existe un producto con el mismo título
+        const isDuplicated = existingProducts.some(product => product.tituloProducto === campoTitulo.value.trim());
 
+        if (isDuplicated) {
+            mostrarAlerta("El producto ya existe. No puedes agregar duplicados.", 'error');
+        } else {
         // Crear el modelo de datos en formato JSON
         const productoInfo = {
             imgProducto: campoImg.value, // URL de la imagen en Cloudinary
@@ -87,13 +86,8 @@ form.addEventListener('submit', function(event) {
         existingProducts.push(productoInfo);
         localStorage.setItem('productos', JSON.stringify(existingProducts));
 
-        // Guardar la información en localStorage (opcional)
-        const existingProducts = JSON.parse(localStorage.getItem('productos')) || [];
-        existingProducts.push(productoInfo);
-        localStorage.setItem('productos', JSON.stringify(existingProducts));
-
         // Mostrar alerta de éxito
-        mostrarAlerta("El servicio se ha agregado correctamente.", 'success');
+        mostrarAlerta("El servicio se ha agregado correctamente.", 'success');d
 
         // Opcional: Limpiar el formulario después de agregar
         form.reset();
@@ -101,6 +95,7 @@ form.addEventListener('submit', function(event) {
             field.classList.remove('is-valid', 'is-invalid');
         });
     }
+}
 
     form.classList.add('was-validated');
 });
