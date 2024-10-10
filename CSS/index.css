@@ -27,7 +27,7 @@ body{
     float: left;
     width: 50%;
     height: 460px;
-    background: url(../acercade/assets/Index.png.webp);
+    background: url(../assets/Index.png.webp);
     background-size: cover;
     box-sizing: border-box;
     margin-top: 10px;

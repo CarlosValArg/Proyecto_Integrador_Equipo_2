@@ -9,7 +9,7 @@ function actualizarNavbar() {
           <div class="container-fluid">
               <div class="navbar-brand">
                   <a href="../index.html">
-                      <img src="../acercade/assets/gray.png" alt="logo" width="150px">
+                      <img src="../assets/gray.png" alt="logo" width="150px">
                   </a>
               </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,16 +18,16 @@ function actualizarNavbar() {
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                          <a class="nav-link" href="../paginaServicios/ListaProductos.html">Servicios</a>
+                          <a class="nav-link" href="../ListaProductos.html">Servicios</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../acercade/acercade.html">Nosotros</a>
+                          <a class="nav-link" href="../acercade.html">Nosotros</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../Formulario/formulario.html">Formulario</a>
+                          <a class="nav-link" href="../formulario.html">Formulario</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="../paginaContacto/contacto.html">Contáctanos</a>
+                          <a class="nav-link" href="../contacto.html">Contáctanos</a>
                       </li>
                   </ul>
                   <div class="d-flex align-items-center">`;
@@ -47,8 +47,8 @@ function actualizarNavbar() {
   } else {
       // Mostrar botones de iniciar sesión y registrarse
       navbarContent += `
-          <a href="../logIn/logIn.html"><button class="btn-button1 me-2">Ingresar</button></a>
-          <a href="../Registrar/Registrar.html"><button class="btn-button2">Registrarse</button></a>`;
+          <a href="../logIn.html"><button class="btn-button1 me-2">Ingresar</button></a>
+          <a href="../Registrar.html"><button class="btn-button2">Registrarse</button></a>`;
   }
 
   navbarContent += `</div></div></div></nav>`;
@@ -66,7 +66,7 @@ function actualizarNavbar() {
             icon: 'info',
             confirmButtonText: 'Aceptar'
         }).then(() => {
-            window.location.href = '../index.html'; // Redirigir a la página de inicio
+            window.location.href = '../../index.html'; // Redirigir a la página de inicio
           });
       });
   }

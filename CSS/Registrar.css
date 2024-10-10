@@ -28,14 +28,14 @@ float:left;
 } 
 @media(max-width:991px){
     body{
-        padding: 30px;
+        padding: 0px;
     }
     form{
         width: 340px;
     }
 }
 #FormRegistro{
-    background-image: url(./assets/output-onlinepngtools.png);
+    background-image: url(../assets/output-onlinepngtools.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
