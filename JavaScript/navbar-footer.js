@@ -3,74 +3,73 @@ const footer = document.getElementById("footer1");
 
 // Función para actualizar el navbar dinámicamente basado en el estado del usuario
 function actualizarNavbar() {
-  const sesionIniciada = localStorage.getItem('sesionIniciada');
-  let navbarContent = `
-      <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-              <div class="navbar-brand">
-                  <a href="../index.html">
-                      <img src="../assets/gray.png" alt="logo" width="150px">
-                  </a>
-              </div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                          <a class="nav-link" href="../ListaProductos.html">Servicios</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="../acercade.html">Nosotros</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="../formulario.html">Formulario</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="../contacto.html">Contáctanos</a>
-                      </li>
-                  </ul>
-                  <div class="d-flex align-items-center">`;
+    const sesionIniciada = localStorage.getItem('sesionIniciada');
+    const currentPage = window.location.pathname.split('/').pop(); // Obtener el nombre del archivo actual
+    let navbarContent = `
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./index.html">
+                        <img src="./assets/gray.png" alt="logo" width="150px">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link ${currentPage === 'ListaProductos.html' ? 'active' : ''}" href="./ListaProductos.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ${currentPage === 'acercade.html' ? 'active' : ''}" href="./acercade.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ${currentPage === 'formulario.html' ? 'active' : ''}" href="./formulario.html">Formulario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ${currentPage === 'contacto.html' ? 'active' : ''}" href="./contacto.html">Contáctanos</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">`;
 
-  if (sesionIniciada) {
-      // Mostrar el ícono de usuario con dropdown para cerrar sesión
-      navbarContent += `
-          <div class="dropdown">
-              <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-person-circle" style="font-size: 1.8rem; color: white"></i>
-              </a>
+    if (sesionIniciada) {
+        navbarContent += `
+            <div class="dropdown">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" id="logoutButton" href="#">Cerrar sesión</a></li>
+                </ul>
+            </div>`;
+    } else {
+        navbarContent += `
+            <a href="./logIn.html"><button class="btn-button1 me-2">Ingresar</button></a>
+            <a href="./Registrar.html"><button class="btn-button2">Registrarse</button></a>`;
+    }
 
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" id="logoutButton" href="#">Cerrar sesión</a></li>
-              </ul>
-          </div>`;
-  } else {
-      // Mostrar botones de iniciar sesión y registrarse
-      navbarContent += `
-          <a href="../logIn.html"><button class="btn-button1 me-2">Ingresar</button></a>
-          <a href="../Registrar.html"><button class="btn-button2">Registrarse</button></a>`;
-  }
+    navbarContent += `</div></div></div></nav>`;
 
-  navbarContent += `</div></div></div></nav>`;
+    navbar.innerHTML = navbarContent;
 
-  navbar.innerHTML = navbarContent;
-
-  // Evento para cerrar sesión
-  if (sesionIniciada) {
-      document.getElementById('logoutButton').addEventListener('click', () => {
-          localStorage.removeItem('sesionIniciada');
-          actualizarNavbar(); // Actualiza el navbar
-          Swal.fire({
-            title: 'Sesión cerrada',
-            text: 'Has cerrado sesión correctamente.',
-            icon: 'info',
-            confirmButtonText: 'Aceptar'
-        }).then(() => {
-            window.location.href = '../../index.html'; // Redirigir a la página de inicio
-          });
-      });
-  }
+    // Evento para cerrar sesión
+    if (sesionIniciada) {
+        document.getElementById('logoutButton').addEventListener('click', () => {
+            localStorage.removeItem('sesionIniciada');
+            actualizarNavbar(); // Actualiza el navbar
+            Swal.fire({
+                title: 'Sesión cerrada',
+                text: 'Has cerrado sesión correctamente.',
+                icon: 'info',
+                confirmButtonText: 'Aceptar'
+            }).then(() => {
+                window.location.href = './index.html'; // Redirigir a la página de inicio
+            });
+        });
+    }
 }
+
 
 // Llama a actualizarNavbar al cargar la página
 document.addEventListener('DOMContentLoaded', actualizarNavbar);

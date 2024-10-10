@@ -49,7 +49,7 @@ if(usuarioRegistrado){
         // Almacenar estado de sesión en localStorage
         localStorage.setItem('sesionIniciada', true);
         // Redirigir a la página de inicio después de que el usuario haga clic en "OK" 
-        window.location.href= '../../index.html'; 
+        window.location.href= 'index.html'; 
         }
     });
 }else{

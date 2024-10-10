@@ -7,6 +7,31 @@
     background-color: #0B2447;
 }
 
+.nav-link {
+    color: white; /* Color del texto normal */
+    font-size: 24px;
+    margin-right: 20px; /* Espacio entre los enlaces */
+    position: relative; /* Habilitar posicionamiento relativo */
+}
+
+.nav-link.active {
+    color: white; /* Asegúrate de que el color del texto activo sea blanco */
+}
+
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px; /* Altura de la línea */
+    background-color: rgb(251, 248, 248); /* Color de la línea */
+    position: absolute;
+    bottom: -5px; /* Ajuste la posición de la línea */
+    left: 0;
+    right: 0;
+}
+
+
+
 .btn-button1 {
     background-color: white;
     border-color: white;
@@ -15,6 +40,7 @@
     border-color: var(--color-blue);
     transition: box-shadow 0.2s ease-in-out;
     font-size: 20px;
+    width: 85px;
 }
 
 .btn-button1:hover {
@@ -27,6 +53,7 @@
     color: white;
     border-radius: 8px;
     font-size: 20px;
+    width: 108px;
 }
 
 .nav-link {
@@ -49,6 +76,65 @@
     background-color: #576CBC;
 }
 
+.navbar .navbar-nav {
+    margin-left: auto; /* Mueve los enlaces hacia la derecha */
+}
+
+.navbar .d-flex {
+    margin-left: 20px; /* Espacio entre los enlaces y el icono del usuario */
+}
+
+.bi-person-circle {
+    color: white; /* Asegúrate de que el ícono sea visible en el fondo oscuro del navbar */
+    font-size: 1.8rem;
+}
+
+
+.user-icon-container {
+    position: relative; /* Habilitar el posicionamiento relativo */
+    display: inline-block; /* Para mantener el ícono como un bloque */
+    margin: 10px; /* Añade margen para separación */
+    z-index: 1000; /* Asegúrate de que el ícono esté por encima del navbar */
+}
+
+.user-icon {
+    font-size: 30px; /* Ajusta el tamaño del ícono */
+    color: #0087F5; /* Cambia el color del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.user-icon:hover {
+    color: #0056b3; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para el dropdown */
+.dropdown-menu {
+    position: absolute; /* Posiciona el menú de forma absoluta */
+    top: 48px; /* Ajusta la distancia desde la parte superior del ícono */
+    right: 0; /* Alinea a la derecha */
+    display: none; /* Ocultar por defecto */
+    width: 25px; /* Ancho de la caja */
+    font-size: 20px; /* Tamaño de letra */
+    padding: 5px 0; /* Espaciado vertical */
+}
+
+.dropdown-item {
+    padding: 5px 22px; /* Espaciado para los elementos del menú */
+}
+
+.user-icon-container:hover .dropdown-menu {
+    display: block; /* Mostrar el menú al pasar el mouse sobre el ícono */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Mostrar el menú al pasar el mouse sobre el ícono */
+}
+
+#dropdownMenuLink{
+    font-size: 1.8rem; 
+    color: white
+}
+
 @media (max-width: 991px) {
     .navbar #footer1 {
         display: flex;
@@ -68,7 +154,7 @@
 
     .btn-button1,
     .btn-button2 {
-        width: 150px; /* Ancho uniforme para los botones */
+        width: 180px; /* Ancho uniforme para los botones */
         margin: 0 10px; /* Espacio entre botones */
     }
 }
@@ -80,5 +166,8 @@
     font-size: 1.5rem; /* Cambia el tamaño del icono */
     padding: 0;
     background-color:  #A5D7E8;
+    p{
+        font-family: roboto;
+    }
 }
 
