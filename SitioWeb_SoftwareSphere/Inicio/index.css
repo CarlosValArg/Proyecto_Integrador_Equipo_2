@@ -1,51 +1,72 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #19376D;
-}
-.titulo{
-    text-align: center;
-    padding: 50px 0px 20px 0px;
-}
-.titulo h1{
-    margin: 0;
-    padding: 0;
     color: white;
-    text-transform: uppercase;
-    font-size: 40px;
-    font-family: roboto;
-}
-.containerf{
-    width: 80%;
-    height: 480px;
-    background-color: #A5D7E8;
-    margin: 0 auto;
-    border: 3px solid #A5D7E8;
-    box-shadow: 0 15px 40px black;
-}
-.containerf .izq{
-    float: left;
-    width: 50%;
-    height: 460px;
-    background: url(../acercade/assets/Index.png.webp);
-    background-size: cover;
-    box-sizing: border-box;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-.containerf .der{
-    float: right;
-    width: 50%;
-    height: 580px;
-    box-sizing: border-box;
-    padding-left: 20px;
-}
-p{
-    font-size: 22px;
-    font-family: roboto;
-    color:black
 }
 
-.izp{
-    position: fixed;
+h2 {
+    color: #A5D7E8;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.navbar {
+    margin-bottom: 2rem;
+}
+
+.carousel-item video {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item video, .carousel-item img {
+        height: 300px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.card {
+    background-color: #27374D;
+    color: white;
+    border: solid;
+}
+
+.card-title {
+    color: #9DB2BF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-text {
+    font-size: 3rem;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 400px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+@media (max-width: 768px) {
+    .card-text {
+        font-size: 0.9rem;
+    }
 }
