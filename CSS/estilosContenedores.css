@@ -7,30 +7,30 @@
     background-color: #0B2447;
 }
 
-.nav-link {
+/* Consolidar la definición de .nav-link */
+.navbar .nav-link {
     color: white; /* Color del texto normal */
     font-size: 24px;
     margin-right: 20px; /* Espacio entre los enlaces */
     position: relative; /* Habilitar posicionamiento relativo */
+    text-decoration: none; /* Eliminar subrayado por defecto */
 }
 
-.nav-link.active {
-    color: white; /* Asegúrate de que el color del texto activo sea blanco */
+.navbar .nav-link.active {
+    color: rgba(217, 205, 205, 0.722); /* Cambia el color del texto activo a rojo */
 }
 
-.nav-link.active::after {
+.navbar .nav-link.active::after {
     content: '';
     display: block;
     width: 100%;
     height: 3px; /* Altura de la línea */
-    background-color: rgb(251, 248, 248); /* Color de la línea */
+    background-color: whitesmoke; /* Cambia el color de la línea a rojo */
     position: absolute;
-    bottom: -5px; /* Ajuste la posición de la línea */
+    bottom: -5px; /* Ajusta la posición de la línea */
     left: 0;
     right: 0;
 }
-
-
 
 .btn-button1 {
     background-color: white;
@@ -54,12 +54,6 @@
     border-radius: 8px;
     font-size: 20px;
     width: 108px;
-}
-
-.nav-link {
-    color: white;
-    font-size: 24px;
-    margin-right: 20px; /* Espacio entre los enlaces */
 }
 
 .navbar-brand {
@@ -88,7 +82,6 @@
     color: white; /* Asegúrate de que el ícono sea visible en el fondo oscuro del navbar */
     font-size: 1.8rem;
 }
-
 
 .user-icon-container {
     position: relative; /* Habilitar el posicionamiento relativo */
@@ -122,17 +115,14 @@
     padding: 5px 22px; /* Espaciado para los elementos del menú */
 }
 
-.user-icon-container:hover .dropdown-menu {
-    display: block; /* Mostrar el menú al pasar el mouse sobre el ícono */
-}
-
+.user-icon-container:hover .dropdown-menu,
 .dropdown:hover .dropdown-menu {
     display: block; /* Mostrar el menú al pasar el mouse sobre el ícono */
 }
 
-#dropdownMenuLink{
+#dropdownMenuLink {
     font-size: 1.8rem; 
-    color: white
+    color: white;
 }
 
 @media (max-width: 991px) {
@@ -160,14 +150,13 @@
 }
 
 /* Footer */
-
-#footer1{
+#footer1 {
     position: relative;
     font-size: 1.5rem; /* Cambia el tamaño del icono */
     padding: 0;
-    background-color:  #A5D7E8;
-    p{
-        font-family: roboto;
-    }
+    background-color: #A5D7E8;
 }
 
+#footer1 p {
+    font-family: roboto;
+}
