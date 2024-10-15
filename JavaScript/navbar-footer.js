@@ -97,25 +97,23 @@ footer.insertAdjacentHTML("beforeend", `
       <!-- Columna Desarrollo de Apps -->
       <div class="col-md-6 col-lg-3 col-xl-2 mx-auto mb-4">
         <h6 class="text-uppercase fw-bold mb-4">Desarrollo de Apps</h6>
-        <p><a href="#!" class="text-reset">Apps iOS</a></p>
-        <p><a href="#!" class="text-reset">Apps Android</a></p>
-        <p><a href="#!" class="text-reset">Apps Smart Watch</a></p>
+        <p><a href="./ListaProductos.html" class="text-reset">Apps iOS</a></p>
+        <p><a href="./ListaProductos.html" class="text-reset">Apps Android</a></p>
+        <p><a href="./ListaProductos.html" class="text-reset">Apps Smart Watch</a></p>
       </div>
 
       <!-- Columna Empresa -->
       <div class="col-md-6 col-lg-2 col-xl-2 mx-auto mb-4">
         <h6 class="text-uppercase fw-bold mb-4">Empresa</h6>
-        <p><a href="#!" class="text-reset">Acerca de nosotros</a></p>
-        <p><a href="#!" class="text-reset">Misión y visión</a></p>
-        <p><a href="#!" class="text-reset">Contáctanos</a></p>
+        <p><a href="./acercade.html" class="text-reset">Acerca de nosotros</a></p>
+        <p><a href="./index.html" class="text-reset">Misión y visión</a></p>
+        <p><a href="./contacto.html" class="text-reset">Contáctanos</a></p>
       </div>
 
       <!-- Columna Comunidad -->
       <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
         <h6 class="text-uppercase fw-bold mb-4">Comunidad</h6>
-        <p><a href="#!" class="text-reset">Centro de ayuda</a></p>
-        <p><a href="#!" class="text-reset">Contrata a un experto</a></p>
-        <p><a href="#!" class="text-reset">Plataforma de desarrollo</a></p>
+        <p><a href="./acercade.html" class="text-reset">Contrata a un experto</a></p>
       </div>
     </div>
   </div>

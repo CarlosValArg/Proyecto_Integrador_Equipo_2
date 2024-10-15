@@ -83,12 +83,12 @@ addItem({
 addItem({
     'name': 'Chat Bot para empresas',
     'img': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBsR1MLm-CYSh4W50Uhtp9UFKnM_EclSrFdw&s',
-    'description': 'Atiende a tus clientes 24/7. Contrata nuestro servicio para que generemos tu Chat Bot con fácil integración a tu sitio web, y respuestas automáticas para las necesidades de tu empresa.',
+    'description': 'Atiende a tus clientes 24/7. Contrata nuestro servicio para que generemos tu ChatBot con fácil integración a tu sitio web, y respuestas automáticas para las necesidades de tu empresa.',
     
 });
 
 addItem({
-    'name': 'Servicios de Autenticacion',
+    'name': 'Servicios de Autenticación',
     'img': 'https://www.redeszone.net/app/uploads-redeszone.net/2020/06/diferencias-autenticacion-autorizacion-3-1200x675.jpg',
     'description': 'Somos expertos en servicios de autenticación seguros y personalizados para proteger tu plataforma digital. Implementamos soluciones adaptadas a las necesidades de tu negocio de manera eficiente.',
     

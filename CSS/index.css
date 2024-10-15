@@ -8,6 +8,7 @@ body {
 h2 {
     color: #A5D7E8;
     font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
 }
 
 p {
@@ -69,4 +70,10 @@ footer {
     .card-text {
         font-size: 0.9rem;
     }
+}
+
+h1{
+    font-family: Roboto;
+    font-size: 30px;
+    color: white;
 }

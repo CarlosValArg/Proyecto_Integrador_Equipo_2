@@ -16,7 +16,6 @@ body{
     font-size: 32px;
 }
 
-
 #FormularioResponsive {
     
     padding: 30px;
@@ -71,4 +70,35 @@ a{
     margin-top: 90px ;
     background-color:  #A5D7E8;
     
+}
+
+#alertValidaciones {
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: medium;
+    font-style:italic;
+    background-color: rgba(215, 218, 248, 0.8); 
+    color: #000000; 
+    border: 1px solid #f5c6cb; 
+    position: relative; 
+    z-index: 1; 
+}
+
+#alertValidaciones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/x.webp); 
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    opacity: 0.5; 
+    z-index: -1; 
 }

@@ -1,14 +1,36 @@
-
-
 /* Acerca de nosotros*/
 #nosotros{
     position: relative;
+    padding-top: 30px;
+    transition: transform 0.3s ease;
+    height: 375px;
 }
 #nosotros:hover {
     
     transform: scale(1.1);
-    transition: 3s;
 }
+
+.col-12.col-md-6:hover .hover-text {
+    display: block; 
+}
+
+.hover-text {
+    display: none; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 18px;
+    overflow: hidden; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
 h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 200; /* ExtraLight */
@@ -105,6 +127,11 @@ h5{
             margin: 0;
             padding: 0;
         }
+
+        .hover-text {
+            font-size: 13px;
+            padding: 10px; 
+        }
     }
 
 /*carrusel*/
@@ -126,8 +153,74 @@ h5{
     margin-left: 30px;
 }
 
+.aqua-gradient {
+    height: 150px;
+    background-image: url(../assets/fondo_tech.avif);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#UB{
+    height: 150px;
+    background-image: url(../assets/UFP.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#CLE{
+    height: 150px;
+    background-image: url(../assets/CLE.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#AAO{
+    height: 150px;
+    background-image: url(../assets/AAO.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#RDB{
+    height: 150px;
+    background-image: url(../assets/RDB.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#MVC{
+    height: 150px;
+    background-image: url(../assets/MVC.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+#LRM{
+    height: 150px;
+    background-image: url(../assets/LRM.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#JAD{
+    height: 150px;
+    background-image: url(../assets/JAD.jfif);
+    background-position: center;
+    background-size: cover;
+}
+
+.image {
+    margin-top: -150px;
+}
+
+.avatar-container {
+    width: 90%;
+    border: 1px solid #eee;
+}
+
 .card {
-    margin: 0 5px 0 5px; /* Espacio entre tarjetas */
+    margin: 0 10px 0 10px; /* Espacio entre tarjetas */
     background: linear-gradient(to bottom right, #5AE0E4, #245065); /* Estilo para el fondo degradado de cada tarjeta */
     border-radius: 30px; /* Estilo redondeado de las cards */
 }
