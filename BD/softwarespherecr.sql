@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `softwaresphere`.`Orden` (
   `fecha` VARCHAR(10) NOT NULL,
   `descripcion` VARCHAR(1000) NOT NULL,
   `usuarioid` INT NOT NULL,
-  PRIMARY KEY (`ordenid`, `usuarioid`))
+  PRIMARY KEY (`ordenid`))
 ENGINE = InnoDB;
 
 
@@ -58,9 +58,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `softwaresphere`.`Servicios_has_Orden` (
   `Servicios_serviciosid` INT NOT NULL,
-  `Orden_ordenid` INT NOT NULL,
-  `Orden_usuarioid` INT NOT NULL,
-  PRIMARY KEY (`Servicios_serviciosid`, `Orden_ordenid`, `Orden_usuarioid`))
+  `Orden_ordenid` INT NOT NULL)
 ENGINE = InnoDB;
 
 
