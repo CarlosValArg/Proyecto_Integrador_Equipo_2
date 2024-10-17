@@ -20,7 +20,7 @@ USE `softwaresphere` ;
 CREATE TABLE IF NOT EXISTS `softwaresphere`.`Usuarios` (
   `usuarioid` INT NOT NULL AUTO_INCREMENT,
   `nombres` VARCHAR(100) NOT NULL,
-  `apellidos` VARCHAR(100) NOT NULL,
+  `apellidos` VARCHAR(100)  NULL,
   `telefono` VARCHAR(10) NOT NULL,
   `correo` VARCHAR(200) NOT NULL,
   `contrasena` VARCHAR(200) NOT NULL,
